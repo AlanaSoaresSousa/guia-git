@@ -137,3 +137,50 @@ function compartilharProjeto() {
     alert("Seu navegador não suporta compartilhamento.");
   }
 }
+
+// ---------------------pagina guias---------------------
+
+const guideToggles = document.querySelectorAll(".botao-guia");
+
+function closeGuide(toggle, content) {
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.querySelector(".indicador-guia").textContent = "+";
+  content.style.height = `${content.scrollHeight}px`;
+  requestAnimationFrame(() => {
+    content.style.height = "0px";
+  });
+  content.addEventListener("transitionend", () => {
+    content.hidden = true;
+  }, { once: true });
+}
+
+function openGuide(toggle, content) {
+  content.hidden = false;
+  content.style.height = "0px";
+  toggle.setAttribute("aria-expanded", "true");
+  toggle.querySelector(".indicador-guia").textContent = "−";
+  requestAnimationFrame(() => {
+    content.style.height = `${content.scrollHeight}px`;
+  });
+  content.addEventListener("transitionend", () => {
+    content.style.height = "auto";
+  }, { once: true });
+}
+
+guideToggles.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const content = document.getElementById(toggle.getAttribute("aria-controls"));
+    const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+    guideToggles.forEach((otherToggle) => {
+      if (otherToggle === toggle || otherToggle.getAttribute("aria-expanded") !== "true") return;
+      closeGuide(otherToggle, document.getElementById(otherToggle.getAttribute("aria-controls")));
+    });
+
+    if (isOpen) {
+      closeGuide(toggle, content);
+    } else {
+      openGuide(toggle, content);
+    }
+  });
+});

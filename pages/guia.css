@@ -1,0 +1,654 @@
+@import url("../style.css");
+
+/* ------ guias -----------------------*/
+.pagina-guias {
+  overflow: hidden;
+}
+
+.pagina-guias h1,
+.pagina-guias h2,
+.pagina-guias h3,
+.pagina-guias p {
+  margin-top: 0;
+}
+
+.heroi-guias {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  border-bottom: 0.0625rem solid color-mix(in srgb, var(--color-border) 55%, transparent);
+}
+
+.marcador-secao {
+  color: var(--color-cyan);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0.08rem;
+  margin-bottom: 1.8rem !important;
+}
+
+.marcador-secao span {
+  color: var(--color-blue);
+}
+
+.heroi-guias h1 {
+  max-width: 72rem;
+  margin-bottom: 2rem;
+  font-size: clamp(4.8rem, 7vw, 8rem);
+  line-height: 0.95;
+}
+
+.heroi-guias h1 span {
+  color: var(--color-blue);
+}
+
+.texto-intro-guias {
+  max-width: 67rem;
+  color: var(--color-text-secondary);
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.indice-guias {
+  padding-top: 9rem;
+  padding-bottom: 11rem;
+}
+
+.cabecalho-guias,
+.cabecalho-recursos {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.cabecalho-guias h2,
+.cabecalho-recursos h2 {
+  margin-bottom: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 4.2rem;
+  line-height: 1;
+}
+
+.cabecalho-guias > p,
+.cabecalho-recursos > p {
+  max-width: 32rem;
+  margin-bottom: 0.4rem;
+  color: var(--color-text-muted);
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.lista-guias {
+  border-top: 0.0625rem solid var(--color-border);
+}
+
+.item-guia {
+  border-bottom: 0.0625rem solid var(--color-border);
+}
+
+.botao-guia {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 5rem minmax(24rem, 0.9fr) minmax(20rem, 1fr) 3rem;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2.2rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.botao-guia:hover .titulo-guia,
+.botao-guia[aria-expanded="true"] .titulo-guia {
+  color: var(--color-blue);
+}
+
+.numero-guia,
+.indice-recurso,
+.tipo-material {
+  color: var(--color-text-dim);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+}
+
+.titulo-guia {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.resumo-guia {
+  color: var(--color-text-muted);
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.indicador-guia {
+  justify-self: end;
+  color: var(--color-blue);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.botao-guia[aria-expanded="true"] .indicador-guia {
+  color: var(--color-orange);
+}
+
+.conteudo-guia {
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
+.interno-guia {
+  padding: 1rem 8rem 4.5rem 5rem;
+}
+
+.objetivo-guia {
+  max-width: 75rem;
+  padding: 1.5rem 1.8rem;
+  border-left: 0.2rem solid var(--color-blue);
+  background: color-mix(in srgb, var(--color-blue) 6%, transparent);
+  color: var(--color-text-secondary);
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.objetivo-guia strong,
+.nota-conceito strong {
+  display: block;
+  margin-bottom: 0.6rem;
+  color: var(--color-blue);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.colunas-guia {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5rem;
+  margin-top: 3rem;
+}
+
+.colunas-guia h3,
+.bloco-conflito h3 {
+  margin: 2.8rem 0 0.8rem;
+  color: var(--color-text);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.7rem;
+}
+
+.colunas-guia h3:first-child,
+.bloco-conflito h3:first-child {
+  margin-top: 0;
+}
+
+.colunas-guia p,
+.bloco-conflito p,
+.lista-desfazer p {
+  color: var(--color-text-secondary);
+  font-size: 1.35rem;
+  line-height: 1.7;
+}
+
+.interno-guia code {
+  color: var(--color-blue);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.interno-guia pre {
+  margin: 1.2rem 0 0;
+  padding: 1.5rem 1.7rem;
+  overflow-x: auto;
+  border: 0.0625rem solid var(--color-border);
+  border-left: 0.2rem solid var(--color-green-light);
+  background: var(--color-terminal-first-dark);
+  color: var(--color-text-secondary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  tab-size: 2;
+}
+
+.interno-guia pre code {
+  color: var(--color-text-secondary);
+  display: block;
+  font: inherit;
+  white-space: inherit;
+}
+
+.fluxo-codigo {
+  border-left-color: var(--color-purple) !important;
+  color: var(--color-purple-soft) !important;
+}
+
+.fluxo-amplo {
+  margin-top: 3.5rem !important;
+  border-left-color: var(--color-blue) !important;
+  color: var(--color-blue) !important;
+}
+
+.fluxo-colaboracao {
+  max-width: 42rem;
+}
+
+.fluxo-horizontal {
+  max-width: none;
+  overflow-x: auto !important;
+  white-space: pre;
+}
+
+.etapa-merge {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 0.0625rem solid var(--color-border);
+}
+
+.etapa-merge h3 {
+  margin: 0 0 0.8rem;
+  color: var(--color-text);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.7rem;
+}
+
+.etapa-merge p {
+  max-width: 78rem;
+  color: var(--color-text-secondary);
+  font-size: 1.35rem;
+  line-height: 1.7;
+}
+
+.nota-conceito,
+.nota-atencao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+  margin-top: 3rem;
+  padding: 1.8rem;
+  border: 0.0625rem solid var(--color-border);
+  background: var(--color-card-inner);
+  color: var(--color-text-secondary);
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.nota-conceito strong {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.nota-conceito b {
+  color: var(--color-text);
+}
+
+.nota-atencao {
+  display: block;
+  border-left: 0.2rem solid var(--color-yellow);
+}
+
+.nota-atencao strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-yellow);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.bloco-conflito {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 0.0625rem solid var(--color-border);
+}
+
+.legenda-conflito {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+  margin-top: 1.5rem;
+  color: var(--color-text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+}
+
+.legenda-conflito b {
+  color: var(--color-red);
+}
+
+.lista-desfazer {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.lista-desfazer > div {
+  padding: 1.8rem;
+  border: 0.0625rem solid var(--color-border);
+  background: var(--color-card-inner);
+}
+
+.lista-desfazer p {
+  margin: 1rem 0 0;
+}
+
+.tabela-comandos {
+  margin-top: 3rem;
+  border: 0.0625rem solid var(--color-border);
+  font-size: 1.25rem;
+}
+
+.tabela-comandos > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1.3rem 1.6rem;
+  border-bottom: 0.0625rem solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.tabela-comandos > div:last-child {
+  border-bottom: 0;
+}
+
+.tabela-comandos > div:first-child {
+  color: var(--color-blue);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+}
+
+.secao-recursos,
+.secao-videos,
+.trilha-aprendizado {
+  padding-top: 8rem;
+  padding-bottom: 9rem;
+  border-top: 0.0625rem solid color-mix(in srgb, var(--color-border) 55%, transparent);
+}
+
+.cabecalho-recursos {
+  align-items: end;
+  margin-bottom: 3rem;
+}
+
+.cabecalho-recursos > div {
+  flex-shrink: 0;
+}
+
+.lista-cursos,
+.lista-materiais {
+  border-top: 0.0625rem solid var(--color-border);
+}
+
+.linha-curso,
+.lista-materiais a {
+  display: grid;
+  grid-template-columns: 5rem 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 0.0625rem solid var(--color-border);
+  color: inherit;
+  text-decoration: none;
+  transition: padding 0.2s ease, color 0.2s ease;
+}
+
+.linha-curso:hover,
+.lista-materiais a:hover {
+  padding-left: 1rem;
+  color: var(--color-blue);
+}
+
+.linha-curso strong,
+.lista-materiais strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.7rem;
+}
+
+.linha-curso small,
+.lista-materiais small {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 1.3rem;
+}
+
+.linha-curso i,
+.lista-materiais i {
+  color: var(--color-blue);
+}
+
+.lista-materiais a {
+  grid-template-columns: 15rem 1fr auto;
+}
+
+.tipo-material {
+  color: var(--color-green-text);
+  font-size: 1rem;
+}
+
+.secao-videos {
+  padding-top: 8rem;
+}
+
+.grade-videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.cartao-video {
+  color: inherit;
+  text-decoration: none;
+}
+
+.miniatura-video {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 0.0625rem solid var(--color-border);
+  background: var(--color-terminal-first);
+}
+
+.miniatura-video img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.cartao-video:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.7);
+}
+
+.icone-reproducao {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 4.8rem;
+  height: 4.8rem;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--color-red);
+  color: var(--color-text);
+  font-size: 1.5rem;
+}
+
+.cartao-video strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+}
+
+.trilha-aprendizado {
+  padding-bottom: 12rem;
+}
+
+.trilha-aprendizado .cabecalho-recursos {
+  display: block;
+  max-width: 58rem;
+}
+
+.trilha-aprendizado .cabecalho-recursos > p:last-child {
+  max-width: 58rem;
+  margin-top: 1.5rem;
+}
+
+.linha-trilha {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 2.5rem;
+  border-top: 0.0625rem solid var(--color-border);
+}
+
+.linha-trilha a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.linha-trilha a:hover strong {
+  color: var(--color-blue);
+}
+
+.linha-trilha span,
+.linha-trilha small {
+  display: block;
+  color: var(--color-text-dim);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+}
+
+.linha-trilha strong {
+  display: block;
+  margin: 0.7rem 0 0.4rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+  transition: color 0.2s ease;
+}
+
+.linha-trilha small {
+  color: var(--color-text-muted);
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+}
+
+.linha-trilha > i {
+  color: var(--color-blue);
+}
+
+@media (max-width: 800px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  nav .menu {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.8rem;
+    overflow-x: auto;
+    padding: 0.8rem 0 0.3rem;
+  }
+
+  nav button {
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .heroi-guias {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .texto-intro-guias {
+    font-size: 1.5rem;
+  }
+
+  .indice-guias,
+  .secao-recursos,
+  .secao-videos,
+  .trilha-aprendizado {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .cabecalho-guias,
+  .cabecalho-recursos {
+    display: block;
+  }
+
+  .cabecalho-guias h2,
+  .cabecalho-recursos h2 {
+    font-size: 3.3rem;
+  }
+
+  .cabecalho-guias > p,
+  .cabecalho-recursos > p {
+    margin-top: 1.5rem;
+  }
+
+  .botao-guia {
+    grid-template-columns: 3.5rem 1fr 2.5rem;
+    gap: 1rem;
+    padding: 1.8rem 0;
+  }
+
+  .resumo-guia {
+    grid-column: 2 / 3;
+    font-size: 1.2rem;
+  }
+
+  .indicador-guia {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .interno-guia {
+    padding: 0.5rem 0 3rem;
+  }
+
+  .colunas-guia,
+  .lista-desfazer,
+  .grade-videos {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .lista-materiais a {
+    grid-template-columns: 1fr auto;
+    gap: 0.8rem 1rem;
+  }
+
+  .tipo-material {
+    grid-column: 1 / -1;
+  }
+
+  .linha-trilha {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+
+  .linha-trilha > i {
+    justify-self: start;
+    transform: rotate(90deg);
+    margin-left: 1rem;
+  }
+
+  footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
