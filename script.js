@@ -1,11 +1,15 @@
 lucide.createIcons();
 
 
-// ---------------------pagina Inicial---------------------
 
+// ----------- camada de outras guias -------
 function irParaGithub() {
   window.open("https://github.com", "_blank");
-}
+} 
+
+
+// ---------------------pagina Inicial---------------------
+
 
 function codeHTML(lines) {
   return lines
@@ -115,6 +119,7 @@ function copiarPix() {
   const chave = document.getElementById("chavePix").textContent;
 
   navigator.clipboard.writeText(chave);
+
 }
 
 function darEstrela() {
@@ -123,6 +128,7 @@ function darEstrela() {
     "_blank"
   );
 }
+
 
 function compartilharProjeto() {
   console.log(navigator.share);
