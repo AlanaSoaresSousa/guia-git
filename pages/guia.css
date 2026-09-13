@@ -15,7 +15,8 @@
 .heroi-guias {
   padding-top: 8rem;
   padding-bottom: 8rem;
-  border-bottom: 0.0625rem solid color-mix(in srgb, var(--color-border) 55%, transparent);
+  border-bottom: 0.0625rem solid
+    color-mix(in srgb, var(--color-border) 55%, transparent);
 }
 
 .marcador-secao {
@@ -223,9 +224,16 @@
   white-space: inherit;
 }
 
+.to-github-page {
+  color: var(--color-blue);
+  text-decoration: none;
+}
+
 .fluxo-codigo {
   border-left-color: var(--color-purple) !important;
   color: var(--color-purple-soft) !important;
+  display: flex;
+  align-items: center;
 }
 
 .fluxo-amplo {
@@ -367,7 +375,8 @@
 .trilha-aprendizado {
   padding-top: 8rem;
   padding-bottom: 9rem;
-  border-top: 0.0625rem solid color-mix(in srgb, var(--color-border) 55%, transparent);
+  border-top: 0.0625rem solid
+    color-mix(in srgb, var(--color-border) 55%, transparent);
 }
 
 .cabecalho-recursos {
@@ -394,7 +403,9 @@
   border-bottom: 0.0625rem solid var(--color-border);
   color: inherit;
   text-decoration: none;
-  transition: padding 0.2s ease, color 0.2s ease;
+  transition:
+    padding 0.2s ease,
+    color 0.2s ease;
 }
 
 .linha-curso:hover,
@@ -461,7 +472,9 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
 .cartao-video:hover img {
@@ -547,6 +560,239 @@
   color: var(--color-blue);
 }
 
+.referencia-git {
+  padding-top: 8rem;
+  padding-bottom: 9rem;
+  border-top: 0.0625rem solid
+    color-mix(in srgb, var(--color-border) 55%, transparent);
+}
+
+.referencia-cabecalho {
+  margin-bottom: 3rem;
+}
+
+.referencia-painel {
+  display: grid;
+  height: 44rem;
+  grid-template-columns: minmax(15rem, 0.75fr) minmax(0, 1.8fr);
+  overflow: hidden;
+  border: 0.0625rem solid var(--color-border);
+  border-radius: 0.8rem;
+  background: var(--color-terminal-first-dark);
+}
+
+.referencia-painel > *,
+.referencia-painel div {
+  border-radius: 0.6rem;
+}
+
+.lista-comandos {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-right: 0.0625rem solid var(--color-border);
+  background: var(--color-terminal-second);
+}
+
+.lista-comandos-scroll {
+  height: 100%;
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.lista-comandos-scroll::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+.lista-comandos-scroll::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: var(--color-border);
+}
+
+.categoria-comandos + .categoria-comandos {
+  margin-top: 2rem;
+}
+
+.categoria-comandos h3,
+.rotulo-comando,
+.terminal-topo b,
+.pdf-referencia strong {
+  color: var(--color-text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  letter-spacing: 0.06rem;
+  text-transform: uppercase;
+}
+
+.categoria-comandos h3 {
+  margin: 0 0 0.7rem;
+  color: var(--color-green-text);
+}
+
+.titulo-principais-comandos {
+  margin: 0 0 1.5rem;
+  color: var(--color-text);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.comando-referencia {
+  width: 100%;
+  display: block;
+  padding: 0.65rem 0.8rem;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font:
+    1.25rem "JetBrains Mono",
+    monospace;
+  text-align: left;
+  cursor: pointer;
+}
+
+.comando-referencia:hover,
+.comando-referencia.ativo {
+  background: var(--color-blue-glow);
+  color: var(--color-blue);
+}
+
+.detalhe-comando {
+  min-width: 0;
+  padding: 3rem;
+}
+
+.rotulo-comando {
+  margin: 0 0 1rem;
+  color: var(--color-blue);
+}
+
+.detalhe-comando > h3 {
+  margin: 0 0 1.2rem;
+  color: var(--color-text);
+  font:
+    2.5rem "JetBrains Mono",
+    monospace;
+}
+
+.detalhe-comando > p:not(.rotulo-comando),
+.pdf-referencia p {
+  color: var(--color-text-secondary);
+  font-size: 1.35rem;
+  line-height: 1.7;
+}
+
+.dados-comando {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.dados-comando strong {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--color-green-text);
+  font:
+    1.1rem "JetBrains Mono",
+    monospace;
+  text-transform: uppercase;
+}
+
+.dados-comando pre,
+.terminal-referencia {
+  margin: 0;
+  overflow-x: auto;
+  border: 0.0625rem solid var(--color-border);
+  background: var(--color-terminal-first);
+  color: var(--color-text-secondary);
+  font:
+    1.2rem/1.45 "JetBrains Mono",
+    monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.dados-comando pre {
+  padding: 1rem 1.2rem;
+  border-radius: 0.6rem;
+}
+
+.terminal-referencia {
+  margin-top: 2rem;
+  border-radius: 0.6rem;
+  background: var(--color-terminal-first-dark);
+  white-space: normal;
+}
+
+.terminal-topo span,
+.terminal-topo b {
+  margin: 0;
+}
+
+.terminal-topo {
+  height: 2.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  border-bottom: 0.0625rem solid var(--color-border);
+}
+
+.terminal-topo span {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--color-text-dim);
+}
+.baixar-pdf{
+  text-decoration: none;
+}
+.terminal-topo span:first-child {
+  background: var(--color-red);
+}
+.terminal-topo span:nth-child(2) {
+  background: var(--color-yellow);
+}
+.terminal-topo span:nth-child(3) {
+  background: var(--color-green-light);
+}
+.terminal-topo b {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.terminal-referencia pre {
+  margin: 0;
+  padding: 3.6rem 1.2rem;
+  color: var(--color-green-text);
+}
+
+.pdf-referencia {
+  margin-top: 1.5rem;
+  padding: 1.6rem 1.8rem;
+  border: 0.0625rem solid var(--color-border);
+  border-radius: 0.8rem;
+  background: var(--color-terminal-first-dark);
+}
+
+.pdf-referencia strong {
+  color: var(--color-text);
+}
+.pdf-referencia p {
+  margin: 0.7rem 0 1.2rem;
+}
+.pdf-referencia a {
+  color: var(--color-blue);
+  font:
+    1.2rem "JetBrains Mono",
+    monospace;
+}
+/* 
 @media (max-width: 800px) {
   nav {
     flex-wrap: wrap;
@@ -626,6 +872,35 @@
     gap: 2rem;
   }
 
+  .referencia-git {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .referencia-painel {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .lista-comandos {
+    height: auto;
+    border-right: 0;
+    border-bottom: 0.0625rem solid var(--color-border);
+  }
+
+  .lista-comandos-scroll {
+    height: 28rem;
+    flex: none;
+  }
+
+  .detalhe-comando {
+    padding: 2rem 1.5rem;
+  }
+
+  .dados-comando {
+    grid-template-columns: 1fr;
+  }
+
   .lista-materiais a {
     grid-template-columns: 1fr auto;
     gap: 0.8rem 1rem;
@@ -651,4 +926,4 @@
     align-items: flex-start;
     gap: 0.5rem;
   }
-}
+} */
