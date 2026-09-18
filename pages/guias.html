@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitBase</title>
+    <link rel="stylesheet" href="./guia.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <div class="circle-gradiente-blue-green"></div>
+    <header>
+      <nav class="container">
+        <div class="logo">
+          <img src="../assets/logo.png" alt="" />
+          <p>GitBase <span>.</span></p>
+        </div>
+        <div class="menu">
+          <a href="../index.html">Início</a>
+          <a href="../git.html">Git</a>
+          <a href="../github.html">Github</a>
+          <a href="./guias.html">Guias</a>
+          <a href="./sobre.html">Sobre</a>
+        </div>
+        <button onclick="irParaGithub()">Conhecer Github</button>
+      </nav>
+    </header>
+
+    <main class="pagina-guias">
+      <section class="heroi-guias container">
+        <p class="marcador-secao"><span>――</span> CENTRAL DE RECURSOS</p>
+        <h1>Guias e <span>conteúdos.</span></h1>
+        <p class="texto-intro-guias">
+          Encontre materiais para aprofundar seus conhecimentos em Git e GitHub.
+          Guias práticos, cursos, vídeos, documentação e livros para continuar
+          aprendendo.
+        </p>
+      </section>
+
+      <section class="indice-guias container">
+        <div class="cabecalho-guias">
+          <div>
+            <p class="marcador-secao"><span>――</span> APRENDA FAZENDO</p>
+            <h2>Guias do GitBase</h2>
+          </div>
+          <p>
+            Abra um assunto para ver o contexto, os comandos e o fluxo completo.
+          </p>
+        </div>
+
+        <div class="lista-guias">
+          <article class="item-guia">
+            <button
+              class="botao-guia"
+              aria-expanded="false"
+              aria-controls="conteudo-guia-1"
+            >
+              <span class="numero-guia">01</span>
+              <span class="titulo-guia"
+                >Criando e conectando seu repositório</span
+              >
+              <span class="resumo-guia"
+                >Aprenda a criar um repositório local, criar o repositório
+                remoto no GitHub e conectar os dois.</span
+              >
+              <span class="indicador-guia">+</span>
+            </button>
+            <div class="conteudo-guia" id="conteudo-guia-1" hidden>
+              <div class="interno-guia">
+                <p class="objetivo-guia">
+                  <strong>Objetivo</strong> Começar um projeto no computador
+                  utilizando Git e conectá-lo a um repositório no GitHub.
+                </p>
+                <div class="colunas-guia">
+                  <div>
+                    <h3>01. Criando a pasta do projeto</h3>
+                    <p>
+                      Primeiro, tenha uma pasta onde ficarão os arquivos do
+                      projeto. Abra o terminal dentro dela para que os próximos
+                      comandos atuem no lugar certo.
+                    </p>
+                    <h3>02. Inicializando o Git</h3>
+                    <p>
+                      O comando abaixo transforma a pasta em um repositório Git
+                      local, criando a estrutura que guarda o histórico.
+                    </p>
+                    <pre><code>git init</code></pre>
+                    <h3>03. Verificando o repositório</h3>
+                    <p>
+                      Use <code>git status</code> para conferir o estado atual
+                      dos arquivos e saber o que o Git está acompanhando.
+                    </p>
+                    <pre><code>git status</code></pre>
+                  </div>
+                  <div>
+                    <h3>04. Criando o repositório no GitHub</h3>
+                    <p>
+                      Agora crie um repositório remoto no GitHub. Ele ficará
+                      hospedado na plataforma e poderá receber o histórico do
+                      seu computador. acesse a seção
+                      <a class="to-github-page" href="./github.html">github</a>
+                      para aprender a criar um repositório remoto.
+                    </p>
+                    <pre class="fluxo-codigo"><code>Computador
+└── Repositório local
+
+        ↕ conexão
+
+GitHub
+└── Repositório remoto</code></pre>
+                    <h3>05. Conectando os dois</h3>
+                    <p>
+                      <code>origin</code> é o nome normalmente usado para
+                      identificar o remoto principal. Este comando registra a
+                      URL do GitHub no projeto local.
+                    </p>
+                    <pre><code>git remote add origin URL_DO_REPOSITORIO</code></pre>
+                    <h3>06. Verificando a conexão</h3>
+                    <p>
+                      Confira os endereços configurados e se eles serão usados
+                      para leitura e envio.
+                    </p>
+                    <pre><code>git remote -v</code></pre>
+                  </div>
+                </div>
+                <div class="nota-conceito">
+                  <strong>Conceito importante</strong
+                  ><span><b>Repositório local</b> fica no computador.</span
+                  ><span><b>Repositório remoto</b> fica no GitHub.</span
+                  ><span
+                    ><code>git remote add origin</code> estabelece a referência
+                    entre os dois.</span
+                  >
+                </div>
+                <pre class="fluxo-amplo">
+                  <code>Criar projeto  →  git init  →  Criar no GitHub  →  git remote add origin  →  Local conectado ao remoto</code>
+                </pre>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-guia">
+            <button
+              class="botao-guia"
+              aria-expanded="false"
+              aria-controls="conteudo-guia-2"
+            >
+              <span class="numero-guia">02</span
+              ><span class="titulo-guia"
+                >Enviando seu projeto para o GitHub</span
+              ><span class="resumo-guia"
+                >Aprenda a registrar suas alterações e enviar seu projeto local
+                para o repositório remoto.</span
+              ><span class="indicador-guia">+</span>
+            </button>
+            <div class="conteudo-guia" id="conteudo-guia-2" hidden>
+              <div class="interno-guia">
+                <p class="objetivo-guia">
+                  <strong>Objetivo</strong> Registrar alterações no histórico
+                  local e enviá-las para o GitHub com segurança.
+                </p>
+                <div class="colunas-guia">
+                  <div>
+                    <h3>01. Verificando alterações</h3>
+                    <p>
+                      Antes de preparar qualquer coisa, veja quais arquivos
+                      foram modificados, adicionados ou ainda não são
+                      rastreados.
+                    </p>
+                    <pre><code>git status</code></pre>
+                    <h3>02. Adicionando arquivos</h3>
+                    <p>
+                      <code>git add .</code> coloca as alterações na
+                      <b>staging area</b>, a área de preparação do próximo
+                      commit.
+                    </p>
+                    <pre><code>git add .</code></pre>
+                  </div>
+                  <div>
+                    <h3>03. Criando um commit</h3>
+                    <p>
+                      O commit registra uma versão das alterações no histórico
+                      local. A mensagem deve explicar o que mudou.
+                    </p>
+                    <pre><code>git commit -m "Minha primeira alteração"</code></pre>
+                    <div class="nota-atencao">
+                      <strong>Importante</strong> Commit não envia o projeto
+                      para o GitHub. Ele só registra a versão localmente.
+                    </div>
+                    <h3>04. Enviando para o GitHub</h3>
+                    <p>
+                      <code>push</code> envia os commits locais para o
+                      repositório remoto.
+                    </p>
+                    <pre><code>git push origin main</code></pre>
+                  </div>
+                </div>
+                <pre
+                  class="fluxo-amplo"
+                ><code>Arquivos modificados → git add → Staging Area → git commit → Histórico local → git push → GitHub</code></pre>
+                <div class="nota-conceito">
+                  <strong>Vocabulário do fluxo</strong
+                  ><span
+                    ><b>Working directory</b> é onde você edita os
+                    arquivos.</span
+                  ><span
+                    ><b>Staging area</b> reúne o que entrará no próximo
+                    commit.</span
+                  ><span
+                    ><b>Commit</b> cria um ponto no histórico; <b>push</b> o
+                    envia ao remoto.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-guia">
+            <button
+              class="botao-guia"
+              aria-expanded="false"
+              aria-controls="conteudo-guia-3"
+            >
+              <span class="numero-guia">03</span
+              ><span class="titulo-guia">Baixando e atualizando um projeto</span
+              ><span class="resumo-guia"
+                >Aprenda a clonar um projeto do GitHub e baixar novas alterações
+                para o seu repositório local.</span
+              ><span class="indicador-guia">+</span>
+            </button>
+            <div class="conteudo-guia" id="conteudo-guia-3" hidden>
+              <div class="interno-guia">
+                <p class="objetivo-guia">
+                  <strong>Objetivo</strong> Entender a diferença entre obter um
+                  projeto pela primeira vez e atualizar um projeto que já está
+                  no computador.
+                </p>
+                <div class="colunas-guia">
+                  <div>
+                    <h3>01. Clonando pela primeira vez</h3>
+                    <p>
+                      <code>git clone</code> copia o repositório remoto para o
+                      computador e já configura sua conexão com o GitHub.
+                    </p>
+                    <pre><code>git clone URL_DO_REPOSITORIO
+cd nome-do-projeto</code></pre>
+                    <pre class="fluxo-codigo"><code>GitHub
+   ↓
+git clone
+   ↓
+Computador</code></pre>
+                  </div>
+                  <div>
+                    <h3>02. Atualizando o projeto</h3>
+                    <p>
+                      Quando o projeto já foi clonado, use
+                      <code>git pull</code> para buscar alterações novas e
+                      integrar as mudanças ao repositório local.
+                    </p>
+                    <pre><code>git pull</code></pre>
+                    <pre class="fluxo-codigo"><code>GitHub
+   ↓
+git pull
+   ↓
+Projeto local atualizado</code></pre>
+                  </div>
+                </div>
+                <div class="nota-conceito">
+                  <strong>Conceito importante</strong
+                  ><span
+                    ><code>git clone</code> é usado normalmente para obter um
+                    projeto pela primeira vez.</span
+                  ><span
+                    ><code>git pull</code> atualiza um projeto que já foi
+                    clonado.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-guia">
+            <button
+              class="botao-guia"
+              aria-expanded="false"
+              aria-controls="conteudo-guia-4"
+            >
+              <span class="numero-guia">04</span
+              ><span class="titulo-guia"
+                >Trabalhando com Branches, Merge e Conflitos</span
+              ><span class="resumo-guia"
+                >Aprenda a criar branches, juntar alterações com merge e
+                resolver conflitos.</span
+              ><span class="indicador-guia">+</span>
+            </button>
+            <div class="conteudo-guia" id="conteudo-guia-4" hidden>
+              <div class="interno-guia">
+                <p class="objetivo-guia">
+                  <strong>Objetivo</strong> Desenvolver em uma linha separada,
+                  integrar o trabalho na <code>main</code> e entender o que
+                  fazer quando alterações entram em conflito.
+                </p>
+                <div class="colunas-guia">
+                  <div>
+                    <h3>01. Criando e trocando de branch</h3>
+                    <p>
+                      Uma branch cria uma linha separada de desenvolvimento.
+                      Assim, você experimenta sem alterar diretamente a versão
+                      principal.
+                    </p>
+                    <pre><code>git branch nova-feature
+git switch -c nova-feature
+git switch nova-feature</code></pre>
+                    <h3>02. Trabalhando na branch</h3>
+                    <p>
+                      Faça as alterações normalmente e registre o resultado na
+                      branch da funcionalidade.
+                    </p>
+                    <pre><code>git add .
+git commit -m "Adiciona nova funcionalidade"</code></pre>
+                    <h3>03. Voltando para a main</h3>
+                    <pre><code>git switch main</code></pre>
+                  </div>
+                  <div>
+                    <h3>04. Fazendo merge</h3>
+                    <p>
+                      Com a <code>main</code> ativa, <code>merge</code> junta
+                      nela as alterações da branch escolhida.
+                    </p>
+                    <pre><code>git merge nova-feature</code></pre>
+                    <pre class="fluxo-codigo"><code>main ─────────●────────●
+               \      /
+                ●────●
+                 feature</code></pre>
+                    <h3>05. Enviando a branch</h3>
+                    <p>
+                      Publique a branch no GitHub para compartilhá-la ou abrir
+                      um Pull Request.
+                    </p>
+                    <pre><code>git push -u origin nova-feature</code></pre>
+                  </div>
+                </div>
+                <div class="bloco-conflito">
+                  <h3>06. Quando surge um conflito</h3>
+                  <p>
+                    O conflito acontece quando o Git encontra alterações
+                    incompatíveis e não consegue decidir qual deve permanecer.
+                  </p>
+                  <pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+console.log("Olá");
+=======
+console.log("Hello");
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; nova-feature</code></pre>
+                  <div class="legenda-conflito">
+                    <span
+                      ><b>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</b> início da versão
+                      atual</span
+                    ><span><b>=======</b> separa as duas versões</span
+                    ><span
+                      ><b>&gt;&gt;&gt;&gt;&gt;&gt;&gt; nova-feature</b> final da
+                      outra alteração</span
+                    >
+                  </div>
+                  <h3>Resolvendo o conflito</h3>
+                  <p>
+                    Abra o arquivo, escolha o código correto, remova os
+                    marcadores, salve e registre a resolução.
+                  </p>
+                  <pre><code>git add .
+git commit -m "Resolve conflito"</code></pre>
+                </div>
+                <pre
+                  class="fluxo-amplo"
+                ><code>Criar branch → Desenvolver → Commit → main → Merge → Conflito? → Resolver → Commit</code></pre>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-guia">
+            <button
+              class="botao-guia"
+              aria-expanded="false"
+              aria-controls="conteudo-guia-5"
+            >
+              <span class="numero-guia">05</span
+              ><span class="titulo-guia">Desfazendo alterações</span
+              ><span class="resumo-guia"
+                >Aprenda a voltar atrás em alterações e corrigir erros durante o
+                desenvolvimento.</span
+              ><span class="indicador-guia">+</span>
+            </button>
+            <div class="conteudo-guia" id="conteudo-guia-5" hidden>
+              <div class="interno-guia">
+                <p class="objetivo-guia">
+                  <strong>Objetivo</strong> Escolher a ferramenta adequada para
+                  desfazer uma alteração, tirar algo do staging ou reverter um
+                  commit.
+                </p>
+                <div class="lista-desfazer">
+                  <div>
+                    <code>git restore arquivo.txt</code>
+                    <p>
+                      Desfaz as alterações do arquivo e volta para a versão do
+                      último commit.
+                    </p>
+                  </div>
+                  <div>
+                    <code>git restore --staged arquivo.txt</code>
+                    <p>
+                      Remove o arquivo da staging area sem necessariamente
+                      apagar as alterações.
+                    </p>
+                  </div>
+                  <div>
+                    <code>git revert ID_DO_COMMIT</code>
+                    <p>
+                      Desfaz as alterações de um commit criando um novo commit,
+                      sem apagar o histórico.
+                    </p>
+                  </div>
+                  <div>
+                    <code>git reset --hard ID_DO_COMMIT</code>
+                    <p>
+                      Volta o projeto para um commit anterior e apaga as
+                      alterações posteriores. Use com cuidado.
+                    </p>
+                  </div>
+                </div>
+                <div class="nota-atencao">
+                  <strong>Atenção ao reset --hard</strong> Esse comando pode
+                  causar perda de alterações não salvas. Confirme o estado do
+                  projeto antes de executá-lo.
+                </div>
+                <div class="tabela-comandos">
+                  <div><span>Situação</span><span>Comando</span></div>
+                  <div>
+                    <span>Desfazer alteração</span><code>git restore</code>
+                  </div>
+                  <div>
+                    <span>Tirar arquivo do staging</span
+                    ><code>git restore --staged</code>
+                  </div>
+                  <div><span>Desfazer commit</span><code>git revert</code></div>
+                  <div>
+                    <span>Voltar para outro commit</span><code>git reset</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-guia">
+            <button
+              class="botao-guia"
+              aria-expanded="false"
+              aria-controls="conteudo-guia-6"
+            >
+              <span class="numero-guia">06</span
+              ><span class="titulo-guia"
+                >Colaborando em um projeto no GitHub</span
+              ><span class="resumo-guia"
+                >Aprenda um fluxo básico de colaboração usando branches, Pull
+                Requests e GitHub.</span
+              ><span class="indicador-guia">+</span>
+            </button>
+            <div class="conteudo-guia" id="conteudo-guia-6" hidden>
+              <div class="interno-guia">
+                <p class="objetivo-guia">
+                  <strong>Objetivo</strong> Trabalhar com outras pessoas sem
+                  alterar diretamente a branch principal e usando revisão antes
+                  do merge.
+                </p>
+                <pre
+                  class="fluxo-amplo fluxo-colaboracao fluxo-horizontal"
+                ><code>GitHub  →  clone  →  criar branch  →  alterações  →  commit  →  push  →  Pull Request  →  revisão  →  merge</code></pre>
+
+                <div class="colunas-guia">
+                  <div>
+                    <h3>01. Cada pessoa usa uma branch</h3>
+                    <p>
+                      Branches isolam o trabalho de cada pessoa e evitam que
+                      mudanças incompletas cheguem direto à <code>main</code>.
+                    </p>
+                    <pre><code>main
+ │
+ ├── feature-login
+ │
+ └── feature-dashboard</code></pre>
+
+                    <h3>02. Adicione os colaboradores</h3>
+                    <p>
+                      Se outras pessoas precisarem trabalhar diretamente no
+                      repositório, o proprietário pode adicioná-las como
+                      colaboradoras em
+                      <b>Settings → Collaborators</b>. Depois disso, elas
+                      poderão trabalhar no projeto conforme as permissões
+                      concedidas.
+                    </p>
+
+                    <h3>03. Faça alterações e envie sua branch</h3>
+                    <p>
+                      Crie uma branch para sua tarefa, faça os commits e
+                      publique essa branch no GitHub. O push disponibiliza o
+                      trabalho para o restante do time.
+                    </p>
+                    <pre><code>git switch -c minha-feature
+git add .
+git commit -m "Adiciona minha feature"
+git push -u origin minha-feature</code></pre>
+                  </div>
+
+                  <div>
+                    <h3>04. Abra um Pull Request</h3>
+                    <p>
+                      No GitHub, abra o repositório e clique em
+                      <b>Compare &amp; pull request</b> ou em
+                      <b>New pull request</b>. Escolha <code>main</code> como
+                      base e <code>minha-feature</code> como branch de
+                      comparação.
+                    </p>
+                    <p>
+                      Preencha um título objetivo e descreva o que foi alterado,
+                      por que a mudança é necessária e como ela pode ser
+                      testada. Revise os arquivos modificados e adicione os
+                      colaboradores responsáveis pela análise.
+                    </p>
+                    <pre><code>base: main
+compare: minha-feature
+
+Título: Adiciona tela de login
+Descrição: Explica a mudança e os testes realizados</code></pre>
+
+                    <h3>05. Faça o Code Review</h3>
+                    <p>
+                      Os revisores abrem a aba <b>Files changed</b> para
+                      conferir o código linha a linha. Eles podem deixar
+                      comentários, sugerir melhorias ou aprovar a Pull Request.
+                    </p>
+                    <p>
+                      Se pedirem mudanças, faça os ajustes na mesma branch e
+                      envie novos commits. A Pull Request será atualizada
+                      automaticamente.
+                    </p>
+                    <pre><code>git add .
+git commit -m "Ajusta revisão do login"
+git push</code></pre>
+                  </div>
+                </div>
+
+                <div class="etapa-merge">
+                  <h3>06. Aprove e faça o merge</h3>
+                  <p>
+                    Quando os comentários forem resolvidos e as verificações
+                    passarem, um responsável aprova a Pull Request e seleciona
+                    <b>Merge pull request</b>. Depois, a branch pode ser
+                    excluída no GitHub se não for mais necessária.
+                  </p>
+                  <pre class="fluxo-amplo"><code>Branch → Alterações → Commit
+   ↓
+Push → Pull Request → Files changed → Review
+                                      ↓
+                              Aprovação → Merge</code></pre>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="secao-recursos container" id="aprofundar">
+        <div class="cabecalho-recursos">
+          <p class="marcador-secao"><span>――</span> CONTINUE O ESTUDO</p>
+          <h2>Cursos</h2>
+          <p>Conteúdos guiados para transformar prática em repertório.</p>
+        </div>
+        <div class="lista-cursos">
+          <a
+            class="linha-curso"
+            href="https://www.cursoemvideo.com/curso/curso-de-git-e-github/"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="indice-recurso">01</span
+            ><span
+              ><strong>Curso de Git e GitHub | Curso em Vídeo</strong
+              ><small
+                >Curso completo de Git e GitHub, com aproximadamente 20 horas de
+                conteúdo.</small
+              ></span
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i></a
+          ><a
+            class="linha-curso"
+            href="https://youtu.be/2c7yWlpWDJM"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="indice-recurso">02</span
+            ><span
+              ><strong>Guia Git e GitHub</strong
+              ><small>Curso em vídeo para aprender Git e GitHub.</small></span
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+        </div>
+      </section>
+
+      <section class="secao-recursos secao-materiais container">
+        <div class="cabecalho-recursos">
+          <p class="marcador-secao"><span>――</span> REFERÊNCIAS</p>
+          <h2>Documentação e materiais</h2>
+        </div>
+        <div class="lista-materiais">
+          <a
+            href="https://git-scm.com/docs/git/pt_BR#_os_comandos_do_git"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="tipo-material">DOCUMENTAÇÃO</span
+            ><strong>Documentação oficial do Git</strong
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+          <a
+            href="https://docs.github.com/pt/get-started/start-your-journey/what-is-github"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="tipo-material">DOCUMENTAÇÃO</span
+            ><strong>Documentação oficial do GitHub</strong
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+          <a
+            href="https://drive.google.com/file/d/1Dp02xLlLvL68h60vL-ZwcTuYKNBKdBcT/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="tipo-material">LIVRO</span
+            ><strong>Controlando versões com Git</strong
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+          <a
+            href="https://drive.google.com/file/d/1Dp02xLlLvL68h60vL-ZwcTuYKNBKdBcT/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span class="tipo-material">Kit de material </span
+            ><strong>Kit de treinamento do GitHub</strong
+            ><i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></a>
+        </div>
+      </section>
+
+      <section class="secao-videos container">
+        <div class="cabecalho-recursos">
+          <p class="marcador-secao"><span>――</span> ASSISTA E PRATIQUE</p>
+          <h2>Vídeos recomendados</h2>
+        </div>
+        <div class="grade-videos">
+          <a
+            href="https://youtu.be/LkBjOeoHBhA"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cartao-video"
+            ><div class="miniatura-video">
+              <img
+                src="https://img.youtube.com/vi/LkBjOeoHBhA/hqdefault.jpg"
+                alt="Thumbnail do vídeo Git e GitHub explicado com bananas"
+              /><span class="icone-reproducao"
+                ><i class="fa-solid fa-play"></i
+              ></span>
+            </div>
+            <strong>Git e GitHub explicado com bananas</strong></a
+          ><a
+            href="https://youtu.be/pyM5QLS2h6M"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cartao-video"
+            ><div class="miniatura-video">
+              <img
+                src="https://img.youtube.com/vi/pyM5QLS2h6M/hqdefault.jpg"
+                alt="Thumbnail do vídeo Guia completo - do zero"
+              /><span class="icone-reproducao"
+                ><i class="fa-solid fa-play"></i
+              ></span>
+            </div>
+            <strong>Guia completo - do zero</strong></a
+          ><a
+            href="https://youtu.be/LeAEMvHEx4o"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cartao-video"
+            ><div class="miniatura-video">
+              <img
+                src="https://img.youtube.com/vi/LeAEMvHEx4o/hqdefault.jpg"
+                alt="Thumbnail do vídeo Do zero ao avançado - Git e GitHub"
+              /><span class="icone-reproducao"
+                ><i class="fa-solid fa-play"></i
+              ></span>
+            </div>
+            <strong>Do zero ao avançado - Git e GitHub</strong></a
+          >
+        </div>
+      </section>
+
+      <section class="referencia-git container" id="referencia-comandos">
+        <div class="cabecalho-recursos referencia-cabecalho">
+          <div>
+            <p class="marcador-secao"><span>――</span> CONSULTA RÁPIDA</p>
+            <h2>Referência de comandos Git</h2>
+          </div>
+          <p>
+            Selecione um comando para consultar sua finalidade, sintaxe e uma
+            execução típica no terminal.
+          </p>
+        </div>
+
+        <div class="referencia-painel">
+          <aside class="lista-comandos" aria-label="Comandos Git por categoria">
+            <h3 class="titulo-principais-comandos">Principais comandos</h3>
+            <div class="lista-comandos-scroll">
+              <div class="categoria-comandos">
+                <h3>Básico</h3>
+                <button
+                  class="comando-referencia ativo"
+                  type="button"
+                  data-command="init"
+                >
+                  git init
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="status"
+                >
+                  git status
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="config"
+                >
+                  git config
+                </button>
+              </div>
+              <div class="categoria-comandos">
+                <h3>Alterações</h3>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="add"
+                >
+                  git add
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="commit"
+                >
+                  git commit
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="restore"
+                >
+                  git restore
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="restore-staged"
+                >
+                  git restore --staged
+                </button>
+              </div>
+              <div class="categoria-comandos">
+                <h3>Histórico</h3>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="log"
+                >
+                  git log
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="diff"
+                >
+                  git diff
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="revert"
+                >
+                  git revert
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="reset"
+                >
+                  git reset
+                </button>
+              </div>
+              <div class="categoria-comandos">
+                <h3>Branches</h3>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="branch"
+                >
+                  git branch
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="switch"
+                >
+                  git switch
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="merge"
+                >
+                  git merge
+                </button>
+              </div>
+              <div class="categoria-comandos">
+                <h3>Remoto</h3>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="remote"
+                >
+                  git remote
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="clone"
+                >
+                  git clone
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="pull"
+                >
+                  git pull
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="push"
+                >
+                  git push
+                </button>
+              </div>
+              <div class="categoria-comandos">
+                <h3>Outros</h3>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="stash"
+                >
+                  git stash
+                </button>
+                <button
+                  class="comando-referencia"
+                  type="button"
+                  data-command="tag"
+                >
+                  git tag
+                </button>
+              </div>
+            </div>
+          </aside>
+
+          <div class="detalhe-comando">
+            <p class="rotulo-comando">COMANDO SELECIONADO</p>
+            <h3 id="referenciaTitulo">git init</h3>
+            <p id="referenciaDescricao"></p>
+            <div class="dados-comando">
+              <div>
+                <strong>Uso</strong>
+                <pre><code id="referenciaUso"></code></pre>
+              </div>
+            </div>
+            <div class="terminal-referencia">
+              <div class="terminal-topo">
+                <span></span><span></span><span></span><b>terminal</b>
+              </div>
+              <pre><code id="referenciaTerminal"></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="pdf-referencia">
+          <strong>📄 Quer consultar mais comandos?</strong>
+          <p>
+            Baixe o PDF com informações e exemplos dos principais comandos Git.
+          </p>
+          <a class="baixar-pdf" target="_blank" 
+            href="https://training.github.com/downloads/pt_BR/github-git-cheat-sheet.pdf"
+            aria-label="Baixar referência em PDF"
+            >Baixar referência em PDF</a
+          >
+        </div>
+      </section>
+
+      <section class="trilha-aprendizado container">
+        <div class="cabecalho-recursos">
+          <p class="marcador-secao"><span>――</span> PRÓXIMO PASSO</p>
+          <h2>Não sabe por onde começar?</h2>
+          <p>
+            Comece pelos fundamentos, avance para os guias práticos e use os
+            materiais recomendados para aprofundar seus conhecimentos.
+          </p>
+        </div>
+        <div class="linha-trilha">
+          <a href="../git.html"
+            ><span>01</span><strong>GIT</strong><small>Fundamentos</small></a
+          ><i class="fa-solid fa-arrow-right"></i
+          ><a href="../github.html"
+            ><span>02</span><strong>GITHUB</strong><small>Plataforma</small></a
+          ><i class="fa-solid fa-arrow-right"></i
+          ><a href="./guias.html"
+            ><span>03</span><strong>GUIAS</strong><small>Prática</small></a
+          ><i class="fa-solid fa-arrow-right"></i
+          ><a href="#aprofundar"
+            ><span>04</span><strong>APROFUNDE</strong
+            ><small>Cursos e documentação</small></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>© 2026 GitBase</p>
+        <p>Aprenda. Versione. Colabore.</p>
+      </div>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
