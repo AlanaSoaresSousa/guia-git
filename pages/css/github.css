@@ -1,711 +1,486 @@
-@import url("../../style.css");
+@import url("../style.css");
 
 .pagina-github {
-  --github-blue: #58a6ff;
-  --github-green: #3fb950;
-  --github-border: #30363d;
-  --github-muted: #9da7b4;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-.pagina-github main {
-  padding-bottom: 0;
-}
 .pagina-github h1,
 .pagina-github h2,
 .pagina-github h3,
 .pagina-github p {
   margin-top: 0;
 }
-.pagina-github .container {
-  max-width: 115rem;
-}
 
-.pagina-github .logo {
-  align-items: center;
-}
-
-.pagina-github .logo p {
-  margin: 0;
-}
-
-.heroi-github {
-  min-height: 66rem;
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(32rem, 0.9fr);
-  align-items: center;
-  gap: 8rem;
-  padding-top: 7rem;
+.hero-github {
+  padding-top: 8rem;
   padding-bottom: 9rem;
-  border-bottom: 1px solid var(--github-border);
+  border-bottom: 0.0625rem solid
+    color-mix(in srgb, var(--color-border) 55%, transparent);
 }
 
-.marcador {
+.marcador-secao {
+  color: var(--color-cyan);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0.08rem;
   margin-bottom: 1.8rem !important;
-  color: var(--github-blue);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.12rem;
-  text-transform: uppercase;
 }
 
-.texto-heroi h1,
-.secao-github h2,
-.resumo-github h2 {
-  font-family: "Space Grotesk", sans-serif;
-  letter-spacing: -0.15rem;
+.marcador-secao span {
+  color: var(--color-blue);
 }
 
-.texto-heroi h1 {
-  max-width: 70rem;
-  margin-bottom: 2.5rem;
-  font-size: clamp(4.8rem, 7vw, 8rem);
-  line-height: 0.98;
-}
-
-.texto-heroi h1 span,
-.secao-github h2 span {
-  color: var(--github-blue);
-}
-.subtitulo-heroi {
-  margin: -1rem 0 2.5rem;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(3rem, 4vw, 5rem);
-  font-weight: 600;
-  line-height: 1.05;
-  letter-spacing: -0.1rem;
-}
-.subtitulo-heroi span {
-  color: var(--github-blue);
-}
-.destaque-heroi {
-  max-width: 62rem;
-  color: var(--github-muted);
-  font-size: 1.8rem;
-  line-height: 1.75;
-}
-.acoes-heroi {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  margin-top: 3rem;
-}
-.acao-principal,
-.acao-secundaria {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.25rem 1.7rem;
-  border-radius: 0.5rem;
-  font-size: 1.3rem;
-  font-weight: 700;
-  transition: 0.25s ease;
-}
-.acao-principal {
-  background: var(--github-green);
-  color: #fff;
-}
-.acao-secundaria {
-  border: 1px solid var(--github-border);
-  color: var(--github-muted);
-}
-.acao-principal:hover,
-.acao-secundaria:hover {
-  transform: translateY(-0.3rem);
-  filter: brightness(1.15);
-}
-
-.imagem-heroi-github {
-  margin: 0;
-  border: 1px solid var(--github-border);
-  background: #080b0f;
-  overflow: hidden;
-  box-shadow: 0 2.5rem 7rem rgba(0, 0, 0, 0.38);
-}
-.imagem-heroi-github img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1.62;
-  object-fit: cover;
-}
-.imagem-heroi-github figcaption {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 1.5rem 1.8rem;
-  color: var(--github-muted);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.1rem;
-}
-.ponto-status {
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 50%;
-  background: var(--github-green);
-  box-shadow: 0 0 0 0.4rem rgba(63, 185, 80, 0.12);
-}
-
-.secao-github,
-.resumo-github {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  border-bottom: 1px solid var(--github-border);
-}
-.cabecalho-secao {
-  max-width: 85rem;
-}
-.secao-github h2 {
+.hero-github h1 {
+  max-width: 75rem;
   margin-bottom: 2rem;
-  font-size: clamp(3.6rem, 5vw, 5.8rem);
-  line-height: 1.02;
+  font-size: clamp(5rem, 8vw, 9rem);
+  line-height: 0.92;
 }
-.introducao-secao {
+
+.hero-github h1 span {
+  color: var(--color-blue);
+}
+
+.texto-intro {
   max-width: 70rem;
-  color: var(--github-muted);
-  font-size: 1.7rem;
-  line-height: 1.75;
-}
-.grade-repositorios {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 1.8rem;
-  margin-top: 4rem;
-  align-items: stretch;
-}
-.bloco-explicativo {
-  height: 100%;
-  padding: 2.8rem 3rem;
-  border-left: 0.3rem solid var(--github-blue);
-  border-radius: 1.2rem;
-  background: rgba(88, 166, 255, 0.06);
-}
-.bloco-explicativo h3 {
-  margin: 0 0 1rem;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 2.3rem;
-}
-.bloco-explicativo p {
-  max-width: 70rem;
-  color: var(--github-muted);
-  font-size: 1.6rem;
-  line-height: 1.75;
-}
-.bloco-explicativo p + p {
-  margin-top: 1.5rem;
-}
-.grade-repositorios .grade-cartoes {
-  grid-template-columns: 1fr;
-  gap: 1.8rem;
-  margin-top: 0;
-}
-.grade-introducao {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 6rem;
-  align-items: start;
-  margin-top: 4rem;
-}
-.grade-introducao > p {
-  color: var(--github-muted);
-  font-size: 1.7rem;
-  line-height: 1.8;
-}
-.cartao-citacao {
-  border-left: 0.3rem solid var(--github-blue);
-  padding: 2.5rem 3rem;
-  background: rgba(88, 166, 255, 0.06);
-}
-.marca-citacao {
-  display: block;
-  color: var(--github-blue);
-  font-family: Georgia, serif;
-  font-size: 5rem;
-  line-height: 0.5;
-}
-.cartao-citacao p {
-  color: var(--github-muted);
-  font-size: 1.7rem;
+  color: var(--color-text-secondary);
+  font-size: 1.8rem;
   line-height: 1.7;
 }
-.cartao-citacao strong {
+
+.hero-resumo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 6rem;
+  border: 0.0625rem solid var(--color-border);
+  background: var(--color-border);
+}
+
+.hero-resumo > div {
+  min-height: 15rem;
+  padding: 2.4rem;
+  background: var(--color-card-inner);
+}
+
+.hero-resumo .numero,
+.numero-card {
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--color-text-dim);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+}
+
+.hero-resumo strong {
+  display: block;
+  margin-bottom: 0.8rem;
   color: var(--color-text);
-}
-
-.linha-tempo {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  margin-top: 5rem;
-  border-top: 1px solid var(--github-border);
-}
-.linha-tempo article {
-  min-height: 20rem;
-  padding: 2.5rem 2.5rem 2.5rem 0;
-  border-right: 1px solid var(--github-border);
-}
-.linha-tempo article:not(:first-child) {
-  padding-left: 2.5rem;
-}
-.linha-tempo article:last-child {
-  border-right: 0;
-}
-.linha-tempo span,
-.indice-cartao,
-.praticas span {
-  color: var(--github-blue);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.1rem;
-  letter-spacing: 0.08rem;
-}
-.linha-tempo h3,
-.cartao-informativo h3,
-.praticas h3 {
-  margin: 1.7rem 0 1rem;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 2.3rem;
-}
-.linha-tempo p,
-.cartao-informativo p,
-.praticas p {
-  color: var(--github-muted);
-  font-size: 1.4rem;
-  line-height: 1.75;
-}
-
-.grade-cartoes {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.8rem;
-  margin-top: 4rem;
-}
-.cartao-informativo {
-  padding: 2.8rem;
-  background: #11161d;
-  border: 1px solid var(--github-border);
-  border-radius: 1.2rem;
-  transition: 0.25s ease;
-}
-.cartao-informativo:hover {
-  border-color: var(--github-blue);
-  transform: translateY(-0.4rem);
-}
-.tres-colunas {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.conteudo-dividido {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7rem;
-  margin-top: 4rem;
-}
-.conteudo-dividido > p {
-  color: var(--github-muted);
-  font-size: 1.7rem;
-  line-height: 1.8;
-}
-.lista-destaques {
-  display: grid;
-  gap: 1.2rem;
-  align-content: start;
-}
-.lista-destaques span {
-  padding: 1.6rem 1.8rem;
-  border: 1px solid var(--github-border);
-  color: var(--github-muted);
-  font-size: 1.4rem;
-}
-.lista-destaques i {
-  margin-right: 1rem;
-  color: var(--github-green);
-}
-
-.fluxo-processo,
-.fluxo-automacao,
-.fluxo-agente {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  margin-top: 5rem;
-}
-.fluxo-processo > div {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  min-width: 14rem;
-  padding: 2rem;
-  border: 1px solid var(--github-border);
-  background: #11161d;
-  text-align: center;
-}
-.fluxo-processo b {
-  color: var(--github-blue);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.1rem;
-}
-.fluxo-processo span {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.5rem;
-}
-.fluxo-processo > i,
-.fluxo-automacao > i,
-.fluxo-agente > i {
-  color: var(--github-blue);
-}
-
-.cartao-codigo {
-  margin-top: 4rem;
-  padding: 2.5rem;
-  background: #11161d;
-  border: 1px solid var(--github-border);
-  border-radius: 1.2rem;
-}
-.cartao-codigo header {
-  position: static;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0 0 1.8rem;
-  border-bottom: 1px solid var(--github-border);
-  background: transparent;
-  color: var(--github-muted);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.1rem;
-  animation: none;
-}
-.cartao-codigo pre {
-  margin: 2rem 0 0;
-  padding: 2rem;
-  overflow-x: auto;
-  background: #0d1117;
-  border: 1px solid var(--github-border);
-}
-.cartao-codigo code {
-  color: #e6edf3;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.3rem;
-  line-height: 2;
-}
-.simbolo-prompt,
-.azul {
-  color: var(--github-blue);
-}
-.texto-verde {
-  color: var(--github-green);
-}
-.texto-suave {
-  color: var(--github-muted);
-}
-.automacao-explicacao,
-.agentes-explicacao {
-  max-width: 85rem;
-  margin-top: 4rem;
-  padding: 2.5rem 3rem;
-  border-left: 0.3rem solid var(--github-blue);
-  background: rgba(88, 166, 255, 0.06);
-}
-.agentes-explicacao {
-  border-left: 0;
-}
-.automacao-explicacao h3,
-.agentes-explicacao h3 {
-  margin: 0 0 1rem;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 2.3rem;
-}
-.automacao-explicacao p,
-.agentes-explicacao p {
-  max-width: 70rem;
-  color: var(--github-muted);
-  font-size: 1.6rem;
-  line-height: 1.75;
-}
-.automacao-explicacao p + p,
-.agentes-explicacao p + p {
-  margin-top: 1.5rem;
-}
-.marcador-subsecao {
-  margin-top: 4rem;
-  color: var(--github-blue);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.1rem;
-  letter-spacing: 0.08rem;
-}
-
-.secao-duas-colunas {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7rem;
-}
-.secao-duas-colunas > article {
-  min-width: 0;
-}
-.exemplo-issue {
-  display: grid;
-  gap: 1.2rem;
-  margin-top: 3rem;
-  padding: 2.2rem;
-  border: 1px solid var(--github-border);
-  background: #11161d;
-}
-.issue-aberta {
-  color: var(--github-green);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.1rem;
-}
-.exemplo-issue strong {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.8rem;
-}
-.exemplo-issue h3 {
-  margin: 0;
   font-family: "Space Grotesk", sans-serif;
   font-size: 2rem;
 }
-.exemplo-issue p {
+
+.hero-resumo p {
   margin: 0;
-  color: var(--github-muted);
+  color: var(--color-text-muted);
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.secao-github {
+  padding-top: 9rem;
+  padding-bottom: 10rem;
+}
+
+.secao-sincronizacao,
+.secao-projetos {
+  background: #0d1219;
+}
+
+.cabecalho-secao {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.cabecalho-secao h2 {
+  max-width: 70rem;
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(3.4rem, 5vw, 5.5rem);
+  line-height: 0.98;
+}
+
+.cabecalho-secao > p {
+  max-width: 34rem;
+  margin: 0 0 0.4rem;
+  color: var(--color-text-muted);
   font-size: 1.4rem;
   line-height: 1.6;
 }
-.issue-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  color: var(--github-muted);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.2rem;
-}
-.issue-info i {
-  color: var(--github-blue);
-  margin-right: 0.4rem;
-}
-.quadro-kanban {
+
+.grid-cards {
   display: grid;
-  gap: 1rem;
-  margin-top: 3rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
 }
-.legenda-exemplo {
-  margin: 2.5rem 0 0;
-  padding: 1.8rem 2rem;
+
+.card-github {
+  position: relative;
+  padding: 2.8rem;
+  border: 0.0625rem solid var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-quadro-body);
+}
+
+.card-github:hover {
+  border-color: color-mix(in srgb, var(--color-blue) 45%, var(--color-border));
+  transform: translateY(-0.2rem);
+  transition: 0.2s ease;
+}
+
+.icone-card {
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--color-blue);
+  font-size: 2.4rem;
+}
+
+.card-github h3 {
+  margin-bottom: 1rem;
   color: var(--color-text);
-  font-size: 1.6rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem;
+}
+
+.card-github > p,
+.card-github li {
+  color: var(--color-text-secondary);
+  font-size: 1.3rem;
   line-height: 1.7;
 }
-.legenda-exemplo a {
-  color: var(--github-blue);
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+
+.card-github > p {
+  margin-bottom: 1.8rem;
 }
-.quadro-kanban div {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem 1.7rem;
-  border-left: 0.25rem solid var(--github-blue);
-  background: #11161d;
-  color: var(--github-muted);
-  font-size: 1.4rem;
+
+.card-github ol,
+.card-github ul {
+  margin: 0;
+  padding-left: 2rem;
 }
-.quadro-kanban div:nth-child(2) {
-  border-color: #e3b341;
+
+.card-github li + li {
+  margin-top: 0.7rem;
 }
-.quadro-kanban div:nth-child(3) {
-  border-color: #b486f3;
+
+.card-github a {
+  color: var(--color-blue);
 }
-.quadro-kanban div:nth-child(4) {
-  border-color: var(--github-green);
-}
-.quadro-kanban b {
+
+.card-github strong {
   color: var(--color-text);
 }
 
-.fluxo-automacao,
-.fluxo-agente {
-  justify-content: flex-start;
-  padding: 2.5rem;
-  border: 1px solid var(--github-border);
-  background: #11161d;
+.card-github code,
+.comando code,
+.etapa code,
+.fechamento span {
+  color: var(--color-blue);
   font-family: "JetBrains Mono", monospace;
-  font-size: 1.3rem;
 }
-.fluxo-automacao span,
-.fluxo-agente span {
-  color: var(--github-muted);
-}
-.fluxo-automacao strong,
-.fluxo-agente strong {
-  color: var(--github-green);
-}
-.fluxo-vertical {
-  align-items: stretch;
-  flex-direction: column;
-}
-.fluxo-vertical > span,
-.fluxo-vertical > strong {
-  width: 100%;
+
+.imagem-comparacao {
+  margin-bottom: 4rem;
   padding: 1.2rem;
-  border: 1px solid var(--github-border);
-  background: #11161d;
-  text-align: center;
+  border: 0.0625rem solid var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-card-inner);
 }
-.fluxo-vertical > i {
-  transform: none;
+
+.imagem-comparacao img {
+  display: block;
+  width: 100%;
+  max-height: 42rem;
+  object-fit: cover;
+  border-radius: 0.6rem;
 }
-.cartao-publicacao {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  margin-top: 4rem;
-  padding: 2.2rem;
-  border: 1px solid var(--github-border);
-  border-radius: 1.2rem;
-  background: #11161d;
-}
-.cartao-publicacao > div {
-  display: flex;
-  align-items: center;
+
+.comandos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
 }
-.icone-publicacao {
-  display: grid;
-  place-items: center;
-  width: 4.5rem;
-  height: 4.5rem;
-  color: var(--github-blue);
-  border: 1px solid var(--github-border);
-  border-radius: 0.8rem;
-  font-size: 1.7rem;
+
+.comando {
+  padding: 2.5rem;
+  border: 0.0625rem solid var(--color-border);
+  background: var(--color-card-inner);
 }
-.cartao-publicacao strong {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.4rem;
-}
-.cartao-publicacao p {
-  margin: 0.5rem 0 0;
-  color: var(--github-muted);
-  font-size: 1.3rem;
-}
-.status-online {
-  color: var(--github-green);
+
+.comando > span {
+  color: var(--color-text-dim);
   font-family: "JetBrains Mono", monospace;
   font-size: 1.1rem;
 }
-.status-online i {
-  margin-right: 0.6rem;
-  font-size: 0.7rem;
+
+.comando h3 {
+  margin: 1.5rem 0 0.8rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.9rem;
 }
 
-.praticas {
+.comando p {
+  min-height: 4.5rem;
+  color: var(--color-text-secondary);
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.comando code {
+  display: block;
+  overflow-x: auto;
+  margin-top: 1.5rem;
+  padding: 1.3rem 1.5rem;
+  border-left: 0.2rem solid var(--color-green-light);
+  background: var(--color-terminal-first-dark);
+  white-space: nowrap;
+  font-size: 1.1rem;
+}
+
+.nota-atencao {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1.8rem 2rem;
+  border: 0.0625rem solid var(--color-border);
+  border-left: 0.2rem solid var(--color-yellow);
+  background: var(--color-card-inner);
+}
+
+.nota-atencao strong {
+  flex-shrink: 0;
+  color: var(--color-yellow);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.nota-atencao p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+.nota-atencao code {
+  color: var(--color-text);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.fluxo-equipe {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.etapa {
+  flex: 1;
+  padding: 2.3rem;
+  border: 0.0625rem solid var(--color-border);
+  background: var(--color-card-inner);
+}
+
+.etapa > span {
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--color-text-dim);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+}
+
+.etapa i {
+  margin-bottom: 1.5rem;
+  color: var(--color-blue);
+  font-size: 2rem;
+}
+
+.etapa h3 {
+  margin-bottom: 0.8rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+}
+
+.etapa p {
+  min-height: 6.3rem;
+  color: var(--color-text-secondary);
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.etapa code {
+  display: block;
+  margin-top: 1rem;
+  color: var(--color-green-text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.seta {
+  align-self: center;
+  color: var(--color-blue);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2rem;
+}
+
+.bloco-conflito {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem;
-  margin-top: 4rem;
-}
-.praticas > div {
-  padding-top: 2rem;
-  border-top: 1px solid var(--github-border);
-}
-.resumo-github {
-  max-width: 115rem;
-  border-bottom: 0;
-}
-.resumo-github h2 {
-  max-width: 75rem;
-  font-size: clamp(4rem, 6vw, 7rem);
-}
-.resumo-github > p:not(.marcador) {
-  max-width: 65rem;
-  margin: 2.5rem 0 3rem;
-  color: var(--github-muted);
-  font-size: 1.7rem;
-  line-height: 1.8;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 0.0625rem solid var(--color-border);
 }
 
+.bloco-conflito h3 {
+  margin: 0 0 1rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.4rem;
+}
+
+.bloco-conflito p,
+.bloco-conflito li {
+  color: var(--color-text-secondary);
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.bloco-conflito ol {
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.bloco-conflito li + li {
+  margin-top: 1rem;
+}
+
+.projetos {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.kanban {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.kanban div {
+  min-height: 8rem;
+  padding: 1rem;
+  border: 0.0625rem solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.kanban b {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--color-blue);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+}
+
+.kanban span {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.fechamento {
+  margin-top: 4rem;
+  padding: 2.5rem;
+  border: 0.0625rem solid var(--color-border);
+  background: var(--color-terminal-first);
+  text-align: center;
+}
+
+.fechamento p {
+  max-width: 70rem;
+  margin: 0 auto;
+  color: var(--color-text-secondary);
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+footer {
+  position: relative;
+}
+
+/* Responsividade */
 @media (max-width: 900px) {
-  .heroi-github,
-  .grade-introducao,
-  .conteudo-dividido,
-  .secao-duas-colunas {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-  }
-  .heroi-github {
-    min-height: auto;
-    padding-top: 7rem;
-  }
-  .grade-repositorios {
+  .hero-resumo,
+  .grid-cards,
+  .comandos-grid,
+  .projetos {
     grid-template-columns: 1fr;
   }
-  .linha-tempo {
+
+  .cabecalho-secao {
+    display: block;
+  }
+
+  .cabecalho-secao > p {
+    margin-top: 1.5rem;
+  }
+
+  .fluxo-equipe {
+    display: grid;
     grid-template-columns: 1fr;
   }
-  .linha-tempo article,
-  .linha-tempo article:not(:first-child) {
-    min-height: auto;
-    padding: 2.5rem 0;
-    border-right: 0;
-    border-bottom: 1px solid var(--github-border);
+
+  .seta {
+    transform: rotate(90deg);
+    justify-self: center;
   }
-  .linha-tempo article:last-child {
-    border-bottom: 0;
-  }
-  .grade-cartoes,
-  .tres-colunas {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .praticas {
-    grid-template-columns: repeat(2, 1fr);
+
+  .bloco-conflito {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 }
 
 @media (max-width: 650px) {
-  .secao-github,
-  .resumo-github {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+  .menu {
+    display: none;
   }
-  .heroi-github {
-    padding-top: 5rem;
-    padding-bottom: 7rem;
+
+  .hero-github {
+    padding-top: 6rem;
   }
-  .grade-cartoes,
-  .tres-colunas,
-  .praticas {
+
+  .hero-github h1 {
+    font-size: 5rem;
+  }
+
+  .hero-resumo > div,
+  .card-github,
+  .comando,
+  .etapa {
+    padding: 2rem;
+  }
+
+  .nota-atencao {
+    display: block;
+  }
+
+  .nota-atencao p {
+    margin-top: 1rem;
+  }
+
+  .kanban {
     grid-template-columns: 1fr;
-  }
-  .acoes-heroi,
-  .cartao-publicacao {
-    align-items: stretch;
-    flex-direction: column;
-  }
-  .acao-principal,
-  .acao-secundaria {
-    justify-content: center;
-  }
-  .fluxo-processo,
-  .fluxo-automacao,
-  .fluxo-agente {
-    align-items: stretch;
-    flex-direction: column;
-  }
-  .fluxo-processo > div,
-  .fluxo-automacao > span,
-  .fluxo-agente > span {
-    width: 100%;
-    text-align: center;
-  }
-  .fluxo-processo > i,
-  .fluxo-automacao > i,
-  .fluxo-agente > i {
-    transform: rotate(90deg);
-  }
-  .cartao-codigo header {
-    align-items: flex-start;
-    flex-direction: column;
   }
 }
