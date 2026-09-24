@@ -1,0 +1,647 @@
+# GitHub
+
+## Introdução
+
+O GitHub é uma plataforma voltada para hospedagem de repositórios Git e colaboração no desenvolvimento de software.
+
+Enquanto o Git é responsável pelo controle de versões, o GitHub oferece um ambiente online ao redor desses projetos. Nele, desenvolvedores podem armazenar código, acompanhar alterações, discutir problemas, revisar contribuições, organizar tarefas, automatizar processos e compartilhar seus projetos.
+
+Por isso, Git e GitHub trabalham muito bem juntos, mas não são a mesma coisa.
+
+---
+
+# 1. O que é GitHub?
+
+O GitHub é uma plataforma de desenvolvimento colaborativo baseada em Git.
+
+Um dos seus principais elementos é o repositório, onde um projeto pode ser armazenado e compartilhado. Porém, o GitHub vai além de simplesmente guardar arquivos.
+
+A plataforma reúne ferramentas para diferentes partes do desenvolvimento:
+
+* hospedagem de código;
+* colaboração entre desenvolvedores;
+* Pull Requests;
+* Code Review;
+* Issues;
+* Projects;
+* GitHub Actions;
+* Discussions;
+* GitHub Pages;
+* recursos de segurança;
+* integração com ferramentas de desenvolvimento;
+* recursos de inteligência artificial.
+
+Assim, o GitHub pode ser entendido como um ambiente que reúne código, pessoas, comunicação e processos de desenvolvimento.
+
+---
+
+# 2. História e origem
+
+Para entender o surgimento do GitHub, precisamos voltar alguns anos antes de sua criação.
+
+Em 2005, Linus Torvalds criou o Git durante o desenvolvimento do kernel Linux. O objetivo era possuir um sistema de controle de versões adequado às necessidades de um projeto grande e distribuído.
+
+O Git permitia que os desenvolvedores trabalhassem com o histórico do código de maneira distribuída, sem depender de um único servidor central.
+
+Porém, o Git era principalmente uma ferramenta de controle de versões. Ainda existia espaço para criar uma plataforma que facilitasse a publicação de projetos, a descoberta de código e a colaboração entre desenvolvedores.
+
+Foi nesse contexto que surgiu o GitHub.
+
+O primeiro commit do projeto GitHub aconteceu em outubro de 2007. Alguns meses depois, em abril de 2008, o GitHub foi oficialmente lançado.
+
+---
+
+# 3. Quem criou o GitHub?
+
+O GitHub começou como um projeto paralelo desenvolvido por Tom Preston-Werner e Chris Wanstrath.
+
+Pouco depois, PJ Hyett passou a fazer parte do projeto. Scott Chacon também integrou a equipe inicial.
+
+Em 2008, o próprio GitHub registrava esses quatro nomes como seus quatro funcionários em tempo integral:
+
+* Tom Preston-Werner;
+* Chris Wanstrath;
+* PJ Hyett;
+* Scott Chacon.
+
+A equipe começou pequena, mas a plataforma rapidamente passou a atrair desenvolvedores e projetos públicos.
+
+É importante separar os criadores do Git dos criadores do GitHub.
+
+**Git:**
+
+* criado por Linus Torvalds em 2005.
+
+**GitHub:**
+
+* desenvolvido inicialmente por Tom Preston-Werner, Chris Wanstrath, PJ Hyett e Scott Chacon.
+
+---
+
+# 4. Por que o GitHub surgiu?
+
+O Git já permitia controlar versões de um projeto. O problema era que ainda havia várias tarefas ao redor do código que poderiam ser facilitadas.
+
+Como compartilhar um projeto com outras pessoas?
+
+Como discutir uma alteração?
+
+Como revisar código antes de integrá-lo?
+
+Como acompanhar problemas?
+
+Como descobrir projetos desenvolvidos por outras pessoas?
+
+O GitHub surgiu para criar um espaço em torno do Git que facilitasse justamente esse tipo de interação.
+
+A ideia não era substituir o Git.
+
+Era utilizar o Git como base para construir uma plataforma de colaboração.
+
+Essa diferença é fundamental para entender os dois.
+
+---
+
+# 5. Como o GitHub cresceu?
+
+O crescimento do GitHub esteve ligado à formação de uma comunidade em torno dos projetos hospedados na plataforma.
+
+Pouco depois do lançamento, a quantidade de repositórios cresceu rapidamente. Em fevereiro de 2008, por exemplo, o projeto registrava a criação do seu milésimo repositório.
+
+No final de 2008, o GitHub já registrava mais de 20 mil repositórios públicos e uma equipe inicial de quatro funcionários em tempo integral.
+
+A plataforma continuou evoluindo e passou a oferecer cada vez mais recursos além do simples armazenamento de código.
+
+Com o tempo, recursos como Pull Requests, Issues, Projects, Actions, Pages e Discussions ajudaram a transformar o GitHub em uma plataforma completa para desenvolvimento colaborativo.
+
+Hoje, o GitHub reúne ferramentas relacionadas a colaboração, CI/CD, documentação, gerenciamento de projetos, segurança e desenvolvimento assistido por IA.
+
+---
+
+# 6. Git × GitHub
+
+Git e GitHub são tecnologias diferentes que normalmente trabalham juntas.
+
+### Git
+
+É um sistema de controle de versões.
+
+Ele permite:
+
+* registrar alterações;
+* criar commits;
+* criar branches;
+* comparar versões;
+* trabalhar com histórico;
+* mesclar alterações;
+* trabalhar localmente.
+
+### GitHub
+
+É uma plataforma que utiliza Git e adiciona recursos para:
+
+* hospedar repositórios;
+* colaborar com outras pessoas;
+* revisar código;
+* organizar tarefas;
+* automatizar processos;
+* compartilhar projetos;
+* criar comunidades;
+* apresentar projetos profissionalmente.
+
+Uma maneira simples de visualizar:
+
+**Git → controla a história do código.**
+
+**GitHub → cria um espaço para pessoas trabalharem em torno desse código.**
+
+Para aprender detalhadamente sobre Git, consulte a página **Git** do GitBase.
+
+---
+
+# 7. Repositórios
+
+O repositório é um dos elementos centrais do GitHub.
+
+Ele funciona como o espaço onde um projeto pode ser armazenado e organizado.
+
+Um repositório pode conter:
+
+* código-fonte;
+* arquivos de configuração;
+* documentação;
+* README;
+* histórico de alterações;
+* branches;
+* Issues;
+* Pull Requests;
+* workflows;
+* releases;
+* outros arquivos relacionados ao projeto.
+
+Os repositórios podem ser públicos ou privados.
+
+### Repositório público
+
+Pode ser visualizado por outras pessoas e é uma forma comum de compartilhar projetos e participar do ecossistema open source.
+
+### Repositório privado
+
+Possui acesso restrito às pessoas autorizadas.
+
+Um repositório também pode representar diferentes tipos de trabalho:
+
+* um projeto pessoal;
+* um trabalho acadêmico;
+* uma aplicação;
+* uma biblioteca;
+* um experimento;
+* um projeto open source;
+* um projeto desenvolvido por uma equipe.
+
+---
+
+# 8. Perfil e portfólio
+
+O GitHub não serve apenas para armazenar projetos.
+
+Cada usuário possui um perfil que pode apresentar informações sobre seu trabalho, contribuições e projetos públicos.
+
+Entre os elementos que podem aparecer no perfil estão:
+
+* foto;
+* nome;
+* biografia;
+* localização;
+* links;
+* atividade;
+* gráfico de contribuições;
+* repositórios fixados;
+* README do perfil;
+* conquistas.
+
+## Profile README
+
+O GitHub permite criar um README especial para o perfil.
+
+Para isso, deve existir um repositório público com o mesmo nome de usuário e um arquivo `README.md` em sua raiz. O conteúdo desse arquivo pode aparecer no topo do perfil.
+
+Esse espaço pode ser utilizado para apresentar:
+
+* quem você é;
+* o que estuda;
+* tecnologias que utiliza;
+* projetos;
+* interesses;
+* experiências;
+* links importantes.
+
+## Repositórios fixados
+
+Também é possível fixar repositórios no perfil para destacar projetos que você deseja apresentar primeiro. O GitHub permite selecionar até seis repositórios e gists combinados para essa área.
+
+---
+
+# 9. Colaboração
+
+Uma das principais diferenças entre utilizar Git localmente e utilizar uma plataforma como o GitHub está na colaboração.
+
+Em um projeto com várias pessoas, cada desenvolvedor pode trabalhar em uma parte diferente do sistema.
+
+O GitHub oferece recursos para organizar esse processo.
+
+Um fluxo comum pode ser:
+
+1. criar uma branch;
+2. desenvolver uma funcionalidade;
+3. realizar commits;
+4. enviar a branch para o GitHub;
+5. abrir um Pull Request;
+6. revisar as alterações;
+7. realizar ajustes;
+8. integrar a mudança.
+
+Dessa maneira, o desenvolvimento não precisa acontecer diretamente na branch principal.
+
+---
+
+# 10. Pull Requests e Code Review
+
+Um Pull Request, normalmente chamado de PR, é uma proposta para integrar alterações de uma branch em outra.
+
+Ele permite que a equipe veja o que foi alterado antes da integração.
+
+Durante um Pull Request, é possível:
+
+* visualizar arquivos modificados;
+* comparar alterações;
+* comentar trechos do código;
+* discutir decisões;
+* solicitar mudanças;
+* realizar verificações automáticas;
+* aprovar a alteração;
+* realizar o merge.
+
+## Code Review
+
+O Code Review é o processo de analisar as alterações propostas.
+
+O objetivo não é apenas procurar erros.
+
+Também pode envolver discussões sobre:
+
+* organização do código;
+* legibilidade;
+* segurança;
+* comportamento da funcionalidade;
+* testes;
+* arquitetura;
+* possíveis melhorias.
+
+Assim, o Pull Request cria um espaço onde o código e o contexto da alteração podem ser discutidos antes da integração.
+
+---
+
+# 11. Issues
+
+Issues são utilizadas para registrar e acompanhar assuntos relacionados a um projeto.
+
+Uma Issue pode representar:
+
+* um bug;
+* uma tarefa;
+* uma sugestão;
+* uma melhoria;
+* uma dúvida;
+* uma ideia.
+
+Por exemplo:
+
+**Título:**
+
+`Corrigir erro no formulário de login`
+
+**Descrição:**
+
+> Ao enviar o formulário com determinados dados, a aplicação apresenta uma mensagem de erro inesperada.
+
+A equipe pode então discutir o problema, adicionar informações, associar pessoas, utilizar etiquetas e acompanhar seu progresso.
+
+Issues ajudam a transformar problemas e ideias em itens que podem ser acompanhados.
+
+---
+
+# 12. GitHub Projects
+
+GitHub Projects é um recurso para organizar e acompanhar o trabalho de um projeto.
+
+Ele pode ser utilizado para visualizar tarefas e acompanhar seu estado.
+
+Por exemplo:
+
+```text
+A fazer
+    ↓
+Em andamento
+    ↓
+Em revisão
+    ↓
+Concluído
+```
+
+Uma equipe pode utilizar Projects para organizar:
+
+* tarefas;
+* bugs;
+* funcionalidades;
+* prioridades;
+* Pull Requests;
+* planejamento.
+
+O objetivo é fornecer uma visão mais organizada do trabalho que precisa ser realizado.
+
+---
+
+# 13. GitHub Actions
+
+GitHub Actions é o sistema de automação do GitHub.
+
+Com ele, é possível criar workflows que executam tarefas automaticamente quando determinados eventos acontecem ou em horários programados.
+
+Por exemplo, um projeto pode executar automaticamente:
+
+* testes;
+* análise de código;
+* builds;
+* verificações;
+* publicação de aplicações;
+* geração de arquivos;
+* outras tarefas automatizadas.
+
+Um exemplo simples seria:
+
+```text
+Push
+  ↓
+GitHub Actions
+  ↓
+Executa testes
+  ↓
+Testes aprovados
+  ↓
+Continua o processo
+```
+
+Isso faz parte de práticas de automação e CI/CD.
+
+Um workflow pode ser executado quando ocorre um `push`, quando um Pull Request é aberto ou atualizado e também de acordo com outros eventos configurados.
+
+---
+
+# 14. GitHub Pages
+
+GitHub Pages permite publicar determinados tipos de sites diretamente a partir de um repositório.
+
+Isso é especialmente útil para:
+
+* portfólios;
+* documentação;
+* páginas de projetos;
+* sites estáticos;
+* páginas pessoais.
+
+Um projeto HTML, CSS e JavaScript, por exemplo, pode ser colocado em um repositório e publicado utilizando GitHub Pages.
+
+Isso significa que o GitHub pode ser utilizado não apenas para armazenar o código de um site, mas também para disponibilizar o próprio site.
+
+---
+
+# 15. Discussions
+
+GitHub Discussions é um espaço voltado para conversas dentro de comunidades e projetos.
+
+Enquanto Issues normalmente estão mais relacionadas a tarefas, problemas e melhorias, Discussions pode ser utilizada para conversas mais abertas.
+
+Exemplos:
+
+* perguntas;
+* ideias;
+* discussões sobre o projeto;
+* anúncios;
+* dúvidas da comunidade;
+* troca de experiências.
+
+Isso permite que um projeto tenha um espaço organizado para comunicação entre seus participantes.
+
+---
+
+# 16. Forks e Open Source
+
+Um fork é uma cópia de um repositório que permite trabalhar em um projeto a partir de uma nova cópia sob a conta do usuário.
+
+Forks são muito utilizados em projetos open source.
+
+Um fluxo comum é:
+
+```text
+Projeto original
+      ↓
+    Fork
+      ↓
+Sua cópia
+      ↓
+Alterações
+      ↓
+Pull Request
+      ↓
+Projeto original
+```
+
+Dessa forma, uma pessoa pode contribuir para um projeto mesmo sem possuir acesso direto de escrita ao repositório original.
+
+## Open Source
+
+Projetos open source possuem código que pode ser disponibilizado para estudo, uso e colaboração de acordo com a licença do projeto.
+
+O GitHub tornou-se um dos principais espaços utilizados para esse tipo de colaboração.
+
+Participar de um projeto open source pode envolver:
+
+* corrigir bugs;
+* melhorar documentação;
+* criar funcionalidades;
+* relatar problemas;
+* revisar código;
+* responder dúvidas;
+* enviar Pull Requests.
+
+---
+
+# 17. GitHub + IA / Agents
+
+A inteligência artificial passou a fazer parte cada vez mais do desenvolvimento de software.
+
+O GitHub possui recursos de IA integrados ao ecossistema de desenvolvimento, incluindo o GitHub Copilot e recursos de agentes.
+
+Um agente de desenvolvimento pode trabalhar com o contexto de uma tarefa e auxiliar em etapas mais amplas do desenvolvimento, em vez de simplesmente responder uma pergunta ou gerar um pequeno trecho de código.
+
+Por exemplo, uma tarefa pode envolver:
+
+```text
+Problema
+   ↓
+Analisar o código
+   ↓
+Identificar arquivos relacionados
+   ↓
+Propor alterações
+   ↓
+Implementar mudanças
+   ↓
+Executar verificações
+   ↓
+Apresentar o resultado
+```
+
+Esses recursos estão evoluindo rapidamente, portanto suas capacidades e nomes podem mudar com o tempo.
+
+A ideia central é aproximar a IA do fluxo real de desenvolvimento, utilizando o contexto do próprio projeto.
+
+---
+
+# 18. GitHub no mercado profissional
+
+O GitHub também pode funcionar como uma vitrine técnica.
+
+Um perfil organizado permite apresentar projetos, contribuições e experiências práticas.
+
+Isso pode complementar:
+
+* currículo;
+* LinkedIn;
+* portfólio pessoal;
+* site profissional.
+
+Um recrutador ou profissional interessado em tecnologia pode encontrar informações sobre projetos públicos, documentação, tecnologias utilizadas e contribuições de um desenvolvedor.
+
+Isso não significa que um perfil do GitHub substitua um currículo.
+
+Ele funciona melhor como uma extensão prática da apresentação profissional.
+
+O próprio GitHub possui uma documentação voltada a utilizar o perfil para complementar o currículo e recomenda apresentar informações profissionais, habilidades e projetos relevantes.
+
+### O que um bom perfil pode mostrar?
+
+* projetos relevantes;
+* código organizado;
+* documentação;
+* tecnologias utilizadas;
+* contribuições;
+* participação em projetos open source;
+* capacidade de explicar o próprio trabalho.
+
+Mais importante do que simplesmente possuir muitos repositórios é conseguir apresentar projetos que tenham contexto e sejam compreensíveis para quem está visitando o perfil.
+
+---
+
+# 19. Boas práticas
+
+Utilizar o GitHub não significa apenas colocar código online.
+
+É importante manter os projetos organizados e compreensíveis.
+
+## README bem estruturado
+
+Um bom README pode explicar:
+
+* o que é o projeto;
+* qual problema ele resolve;
+* tecnologias utilizadas;
+* como instalar;
+* como executar;
+* exemplos;
+* funcionalidades.
+
+## Commits compreensíveis
+
+Escreva mensagens que expliquem o que foi alterado.
+
+Evite mensagens muito vagas como:
+
+```text
+coisas
+mudanças
+update
+teste
+```
+
+Prefira algo que identifique a alteração:
+
+```text
+Adiciona validação ao formulário de login
+```
+
+## Não publique informações secretas
+
+Nunca coloque diretamente em um repositório:
+
+* senhas;
+* tokens;
+* chaves privadas;
+* credenciais;
+* arquivos `.env` contendo informações sensíveis.
+
+## Organize seus repositórios
+
+Evite deixar projetos abandonados sem nenhuma explicação.
+
+Uma descrição curta, um README e uma estrutura organizada já ajudam bastante.
+
+## Mantenha o perfil atualizado
+
+Escolha projetos que representem bem aquilo que você sabe fazer.
+
+Um perfil profissional não precisa mostrar absolutamente tudo o que você já programou.
+
+---
+
+# 20. Próximos passos
+
+Agora que você conhece o GitHub, o próximo passo é colocar esses conceitos em prática.
+
+Uma sequência interessante é:
+
+```text
+Git
+ ↓
+GitHub
+ ↓
+Criar um repositório
+ ↓
+Conectar projeto local
+ ↓
+Push e Pull
+ ↓
+Branches
+ ↓
+Pull Requests
+ ↓
+Code Review
+ ↓
+Issues
+ ↓
+Projects
+ ↓
+Actions
+ ↓
+Open Source
+ ↓
+Construir seu próprio portfólio
+```
+
+A página de **Guias** do GitBase apresenta exemplos práticos para realizar essas tarefas utilizando os comandos do Git.
+
+O objetivo não é apenas conhecer o GitHub, mas entender como ele participa do fluxo real de desenvolvimento de software.
+
+**Git controla as versões.
+GitHub conecta pessoas, projetos e ferramentas ao redor desse código.**

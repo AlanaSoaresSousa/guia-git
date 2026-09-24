@@ -49,6 +49,11 @@ a {
   color: inherit;
 }
 
+.container{
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 /* Isola o layout desta página das regras de componentes do index. */
 .git-page section::before {
   display: none;
@@ -69,100 +74,6 @@ a {
   margin-bottom: 0;
   animation: none;
   position: static;
-}
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-body > header {
-  width: 100%;
-  background: #080b0f;
-  border-bottom: 1px solid var(--border-light);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-body > header > nav.container {
-  min-height: 80px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 3rem;
-}
-
-/* LOGO */
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 2.1rem;
-  font-weight: 700;
-}
-
-.logo img {
-  width: 3.4rem;
-  height: 3.4rem;
-  object-fit: contain;
-}
-
-.logo span {
-  color: var(--text);
-}
-
-/* MENU */
-
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-.menu a {
-  color: var(--text-gray);
-  font-size: 1.4rem;
-  font-weight: 500;
-
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  color: var(--blue);
-}
-
-/* BOTÃO */
-
-.header-button {
-  display: inline-block;
-
-  background-color: var(--green);
-  color: var(--text);
-
-  padding: 1rem 1.8rem;
-  border-radius: 0.5rem;
-  border: none;
-
-  font-size: 1.4rem;
-  font-weight: bold;
-  white-space: nowrap;
-  text-decoration: none;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    filter 0.25s ease;
-}
-
-.header-button:hover {
-  transform: translateY(-0.3rem);
-  filter: brightness(1.15);
-  box-shadow: 0 0.5rem 1.5rem rgba(63, 185, 80, 0.35);
 }
 
 /* =====================================================
@@ -286,100 +197,6 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-body > header {
-  width: 100%;
-  background: #080b0f;
-  border-bottom: 1px solid var(--border-light);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-body > header > nav.container {
-  min-height: 80px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  gap: 3rem;
-}
-
-/* LOGO */
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 2.1rem;
-  font-weight: 700;
-}
-
-.logo img {
-  width: 3.4rem;
-  height: 3.4rem;
-  object-fit: contain;
-}
-
-.logo span {
-  color: var(--text);
-}
-
-/* MENU */
-
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-.menu a {
-  color: var(--text-gray);
-  font-size: 1.4rem;
-  font-weight: 500;
-
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  color: var(--blue);
-}
-
-/* BOTÃO */
-
-.header-button {
-  display: inline-block;
-
-  background-color: var(--green);
-  color: var(--text);
-
-  padding: 1rem 1.8rem;
-  border-radius: 0.5rem;
-  border: none;
-
-  font-size: 1.4rem;
-  font-weight: bold;
-  white-space: nowrap;
-  text-decoration: none;
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    filter 0.25s ease;
-}
-
-.header-button:hover {
-  transform: translateY(-0.3rem);
-  filter: brightness(1.15);
-  box-shadow: 0 0.5rem 1.5rem rgba(63, 185, 80, 0.35);
 }
 
 /* =====================================================
@@ -1391,22 +1208,6 @@ footer p {
 ===================================================== */
 
 @media (max-width: 1000px) {
-  body > header > nav.container {
-    flex-wrap: wrap;
-
-    padding: 1.8rem 0;
-  }
-
-  body > header .menu {
-    order: 3;
-
-    width: 100%;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-  }
-
   .hero {
     grid-template-columns: 1fr;
 
@@ -1427,18 +1228,6 @@ footer p {
 
   .container {
     width: 92%;
-  }
-
-  .header-button {
-    display: none;
-  }
-
-  body > header .menu {
-    gap: 1.5rem;
-  }
-
-  body > header .menu a {
-    font-size: 1.2rem;
   }
 
   .content-section,
@@ -1483,6 +1272,20 @@ footer p {
   code {
     font-size: 1.1rem;
   }
+}
+
+/* Espaçamento compacto na seção de boas práticas de commits. */
+.content-section:has(> .commit-terminal) > .section-intro {
+  margin-bottom: 0;
+}
+
+.content-section:has(> .commit-terminal) > .cards-grid {
+  margin-top: 1.5rem;
+  padding: 0;
+}
+
+.content-section:has(> .commit-terminal) > .commit-terminal {
+  margin: 1.5rem auto 2.5rem;
 }
 /* =====================================================
    TERMINAL
@@ -1954,22 +1757,6 @@ footer p {
 ===================================================== */
 
 @media (max-width: 1000px) {
-  body > header > nav.container {
-    flex-wrap: wrap;
-
-    padding: 1.8rem 0;
-  }
-
-  body > header .menu {
-    order: 3;
-
-    width: 100%;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-  }
-
   .hero {
     grid-template-columns: 1fr;
 
@@ -1990,18 +1777,6 @@ footer p {
 
   .container {
     width: 92%;
-  }
-
-  .header-button {
-    display: none;
-  }
-
-  body > header .menu {
-    gap: 1.5rem;
-  }
-
-  body > header .menu a {
-    font-size: 1.2rem;
   }
 
   .content-section,

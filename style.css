@@ -112,7 +112,7 @@ h1 {
     radial-gradient(circle at 85% 35%, var(--color-green-glow), transparent 25%);
 }
 
-header {
+body > header {
   padding: 0.7rem 0rem;
   position: sticky;
   top: 0;
