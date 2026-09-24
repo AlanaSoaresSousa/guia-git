@@ -27,16 +27,16 @@
     <header>
       <nav class="container">
         <div class="logo">
-          <img src="./assets/logo.png" alt="" />
+          <img src="./assets/imagens/geral/logo.png" alt="" />
           <p>GitBase <span>.</span></p>
         </div>
 
         <div class="menu">
           <a href="./index.html">Início</a>
           <a href="./pages/git.html">Git</a>
-          <a href="./github.html">Github</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">Github</a>
           <a href="./pages/guias.html">Guias</a>
-          <a href="pages/sobre.html">Sobre</a>
+          <a href="./pages/sobre.html">Sobre</a>
         </div>
 
         <button onclick="irParaGithub()">Conhecer Github</button>
@@ -54,8 +54,11 @@
               fluxo, entenda cada etapa e descubra como Git e GitHub realmente
               funcionam no desenvolvimento.
             </p>
-            <button class="button1-hero">Ver como funciona</button>
-            <button class="button2-hero">Explorar guias</button>
+            <button 
+            onclick="irParaGit()"
+            class="button1-hero">Ver como funciona</button>
+            <button
+            onclick="irParaGuias()" class="button2-hero">Explorar guias</button>
           </div>
 
           <div class="terminal">
@@ -447,7 +450,7 @@
           </p>
         </div>
         <div class="cta-features">
-          <a href="./git.html" class="cta-feature">
+          <a href="./pages/git.html" class="cta-feature">
             <p class="cta-number">01</p>
             <h3>Aprenda Git</h3>
             <p>Entenda versionamento, commits, branches e o fluxo do Git.</p>

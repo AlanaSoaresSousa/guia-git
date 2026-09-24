@@ -480,7 +480,7 @@ footer {
   padding: 2rem 3rem 0rem 3rem;
   margin-top: 0;
   border-top: 0.0625rem solid var(--color-border);
-  background-image: url("./assets/fundo-footer.jpg");
+  background-image: url("./assets/imagens/geral/fundo-footer.jpg");
 }
 
 footer .container {

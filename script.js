@@ -4,7 +4,13 @@ lucide.createIcons();
 function irParaGithub() {
   window.open("https://github.com", "_blank");
 }
+function irParaGit() {
+  window.location.href = "./pages/git.html";
+}
 
+function irParaGuias() {
+  window.location.href = "./pages/guias.html";
+}
 // ---------------------pagina Inicial---------------------
 
 function codeHTML(lines) {

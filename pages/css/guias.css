@@ -1,4 +1,4 @@
-@import url("../style.css");
+@import url("../../style.css");
 
 /* ------ guias -----------------------*/
 .pagina-guias {
@@ -749,7 +749,7 @@
   border-radius: 50%;
   background: var(--color-text-dim);
 }
-.baixar-pdf{
+.baixar-pdf {
   text-decoration: none;
 }
 .terminal-topo span:first-child {
