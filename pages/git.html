@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Git | GitBase</title>
+   <title>GitBase - aprenda git e github de forma simples</title>
 
+  <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="./style_git.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,35 +19,26 @@
   >
 </head>
 
-<body>
+<body class="git-page">
 
   <!-- ================= HEADER ================= -->
-
+  <div class="circle-gradiente-blue-green"></div>
   <header>
-
     <nav class="container">
-
-      <a href="../index.html" class="logo">
-        <img src="../assets/logo.png" alt="Logo GitBase">
-        <span>GitBase.</span>
-      </a>
-
-      <nav class="menu">
+      <div class="logo">
+        <img src="../assets/logo.png" alt="" />
+        <p>GitBase <span>.</span></p>
+      </div>
+      <div class="menu">
         <a href="../index.html">Início</a>
-        <a href="./git.html">Git</a>
-        <a href="./github.html">Github</a>
+        <a href="../git.html">Git</a>
+        <a href="../github.html">Github</a>
         <a href="./guias.html">Guias</a>
-        <a href="               ./sobre.html">Sobre</a>
-      </nav>
-
-<a href="../github.html" class="header-button">
-    Conhecer Github
-</a>
-
+        <a href="./sobre.html">Sobre</a>
+      </div>
+      <button onclick="irParaGithub()">Conhecer Github</button>
     </nav>
-
   </header>
-
 
   <!-- ================= MAIN ================= -->
 
@@ -123,992 +115,996 @@
 
     <!-- ================= HISTÓRIA ================= -->
 
-<section class="content-section">
-
-  <p class="tag">02 / HISTÓRIA</p>
-
-  <h2>História e origem do Git</h2>
-
-  <div class="history-content">
-
-    <!-- Textos da história -->
-    <div class="history-text">
-
-      <p class="section-intro">
-        O Git foi criado em 2005 por Linus Torvalds, o principal desenvolvedor
-        do sistema operacional Linux. A criação do Git aconteceu porque a equipe
-        responsável pelo desenvolvimento do Linux precisava de uma nova ferramenta
-        para controlar as diversas alterações realizadas no código-fonte do projeto.
-      </p>
-
-      <p class="section-intro">
-        A ferramenta de controle de versão utilizada anteriormente deixou de ser uma
-        opção adequada, criando a necessidade de desenvolver uma alternativa que fosse
-        rápida, segura, eficiente e distribuída. Linus Torvalds desenvolveu então o Git
-        com o objetivo de facilitar o trabalho de vários programadores ao mesmo tempo,
-        permitindo que cada desenvolvedor tivesse uma cópia completa do projeto e pudesse
-        registrar suas alterações localmente.
-      </p>
-
-      <p class="section-intro">
-        Com o passar dos anos, o Git foi aprimorado e passou a ser utilizado em diversos
-        tipos de projetos de software, tornando-se uma das ferramentas de controle de
-        versão mais populares do mundo. Sua evolução também contribuiu para o crescimento
-        de plataformas como o GitHub, que utiliza o Git para facilitar o armazenamento,
-        compartilhamento e colaboração em projetos de programação.
-      </p>
-
-    </div>
-
-    <!-- Imagem da história -->
-    <img
-      src="../assets/linus_torvalds.jpeg" alt="Descrição da imagem"
-      class="history-image"
-    >
-
-  </div>
-
-  <!-- Card informativo -->
-  <article class="info-card">
-
-    <h3>Por que ele foi criado?</h3>
-
-    <p>
-      O objetivo era ter uma ferramenta distribuída, rápida,
-      confiável e capaz de lidar com projetos muito grandes
-      e com milhares de alterações realizadas por diferentes
-      desenvolvedores.
-    </p>
-
-  </article>
-
-</section>
-
-    <!-- ================= POR QUE USAR ================= -->
-
     <section class="content-section">
 
-      <p class="tag">03 / BENEFÍCIOS</p>
+      <p class="tag">02 / HISTÓRIA</p>
 
-      <h2>Por que usar Git?</h2>
+      <h2>História e origem do Git</h2>
 
-      <p class="section-intro">
-        O Git facilita a organização do desenvolvimento e oferece
-        segurança para experimentar novas ideias sem comprometer
-        o código principal.
-      </p>
+      <div class="history-content">
 
+        <!-- Textos da história -->
+        <div class="history-text">
 
-      <section class="cards-grid">
-
-        <article class="card">
-          <span class="number">Motivo_01</span>
-          <h3>Histórico</h3>
-          <p>
-            O Git registra as alterações feitas no projeto por meio dos commits. 
-            Isso permite acompanhar a evolução do código, saber o que foi alterado e recuperar versões anteriores quando necessário.
+          <p class="section-intro">
+            O Git foi criado em 2005 por Linus Torvalds, o principal desenvolvedor
+            do sistema operacional Linux. A criação do Git aconteceu porque a equipe
+            responsável pelo desenvolvimento do Linux precisava de uma nova ferramenta
+            para controlar as diversas alterações realizadas no código-fonte do projeto.
           </p>
-        </article>
 
-        <article class="card">
-          <span class="number">motivo_02</span>
-          <h3>Segurança</h3>
-          <p>
-          O Git ajuda a proteger o projeto contra a perda de informações, 
-          pois mantém diferentes versões dos arquivos. Caso uma alteração cause algum problema, é 
-          possível consultar ou restaurar uma versão anterior.
+          <p class="section-intro">
+            A ferramenta de controle de versão utilizada anteriormente deixou de ser uma
+            opção adequada, criando a necessidade de desenvolver uma alternativa que fosse
+            rápida, segura, eficiente e distribuída. Linus Torvalds desenvolveu então o Git
+            com o objetivo de facilitar o trabalho de vários programadores ao mesmo tempo,
+            permitindo que cada desenvolvedor tivesse uma cópia completa do projeto e pudesse
+            registrar suas alterações localmente.
           </p>
-        </article>
 
-        <article class="card">
-          <span class="number">motivo_03</span>
-          <h3>Organização</h3>
-          <p>
-          O Git facilita a organização do desenvolvimento, 
-          permitindo separar diferentes funcionalidades por meio 
-          de branches e registrar cada etapa do projeto de forma estruturada. 
-          Isso evita que todas as alterações sejam feitas diretamente na versão principal.
+          <p class="section-intro">
+            Com o passar dos anos, o Git foi aprimorado e passou a ser utilizado em diversos
+            tipos de projetos de software, tornando-se uma das ferramentas de controle de
+            versão mais populares do mundo. Sua evolução também contribuiu para o crescimento
+            de plataformas como o GitHub, que utiliza o Git para facilitar o armazenamento,
+            compartilhamento e colaboração em projetos de programação.
           </p>
-        </article>
 
-        <article class="card">
-          <span class="number">motivo_04</span>
-          <h3>Colaboração</h3>
-          <p>
-          O Git permite que várias pessoas trabalhem no mesmo projeto, cada 
-          uma podendo desenvolver diferentes partes e depois integrar suas alterações. 
-          Dessa forma, facilita o trabalho em equipe e ajuda a controlar as modificações 
-          feitas por cada integrante.
-          </p>
-        </article>
+        </div>
+
+        <!-- Imagem da história -->
+        <figure class="history-figure">
+          <img
+            src="../assets/linus_torvalds.jpeg"
+            alt="Linus Torvalds, criador do Linux"
+            class="history-image"
+          >
+          <figcaption>Linus Torvalds</figcaption>
+        </figure>
+
+      </div>
+
+      <!-- Card informativo -->
+      <article class="info-card">
+
+        <h3>Por que ele foi criado?</h3>
+
+        <p>
+          O objetivo era ter uma ferramenta distribuída, rápida,
+          confiável e capaz de lidar com projetos muito grandes
+          e com milhares de alterações realizadas por diferentes
+          desenvolvedores.
+        </p>
+
+      </article>
+
+    </section>
+
+      <!-- ================= POR QUE USAR ================= -->
+
+      <section class="content-section">
+
+        <p class="tag">03 / BENEFÍCIOS</p>
+
+        <h2>Por que usar Git?</h2>
+
+        <p class="section-intro">
+          O Git facilita a organização do desenvolvimento e oferece
+          segurança para experimentar novas ideias sem comprometer
+          o código principal.
+        </p>
+
+
+        <section class="cards-grid">
+
+          <article class="card">
+            <span class="number">Motivo_01</span>
+            <h3>Histórico</h3>
+            <p>
+              O Git registra as alterações feitas no projeto por meio dos commits. 
+              Isso permite acompanhar a evolução do código, saber o que foi alterado e recuperar versões anteriores quando necessário.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="number">motivo_02</span>
+            <h3>Segurança</h3>
+            <p>
+            O Git ajuda a proteger o projeto contra a perda de informações, 
+            pois mantém diferentes versões dos arquivos. Caso uma alteração cause algum problema, é 
+            possível consultar ou restaurar uma versão anterior.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="number">motivo_03</span>
+            <h3>Organização</h3>
+            <p>
+            O Git facilita a organização do desenvolvimento, 
+            permitindo separar diferentes funcionalidades por meio 
+            de branches e registrar cada etapa do projeto de forma estruturada. 
+            Isso evita que todas as alterações sejam feitas diretamente na versão principal.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="number">motivo_04</span>
+            <h3>Colaboração</h3>
+            <p>
+            O Git permite que várias pessoas trabalhem no mesmo projeto, cada 
+            uma podendo desenvolver diferentes partes e depois integrar suas alterações. 
+            Dessa forma, facilita o trabalho em equipe e ajuda a controlar as modificações 
+            feitas por cada integrante.
+            </p>
+          </article>
+
+        </section>
 
       </section>
 
-    </section>
+
+      <!-- ================= COMO FUNCIONA ================= -->
+
+  <section class="content-section">
+
+      <p class="tag">04 / FUNCIONAMENTO</p>
+
+      <h2>Como o Git funciona?</h2>
+
+      <div class="function-content">
+
+          <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
+          <div class="function-text">
+
+              <p class="section-intro">
+                  O Git funciona como um sistema que acompanha e registra as alterações realizadas nos
+                  arquivos de um projeto. O desenvolvedor modifica os arquivos em seu diretório de trabalho
+                  (Working Directory), seleciona as alterações que deseja registrar na Staging Area e, em
+                  seguida, cria um commit, que salva aquele conjunto de modificações no histórico do projeto.
+              </p>
+
+              <p class="section-intro">
+                  O Git permite criar branches para desenvolver funcionalidades separadamente e depois unir
+                  as alterações por meio de um merge. Além disso, o projeto pode ser enviado para um
+                  repositório remoto, como o GitHub, permitindo armazenar o código e compartilhá-lo com
+                  outras pessoas.
+              </p>
+
+          </div>
+
+          <!-- IMAGEM -->
+          <img
+              src="../assets/como_funciona.webp" alt="Descrição da imagem"
+              class="function-image"
+          >
+
+      </div>
+
+      <!-- CARDS -->
+      <section class="cards-grid">
+
+          <article class="card">
+              <span class="number">01</span>
+              <h3>Working Directory</h3>
+              <p>
+                  É a pasta onde você trabalha e modifica os arquivos
+                  do seu projeto.
+              </p>
+          </article>
+
+          <article class="card">
+              <span class="number">02</span>
+              <h3>Staging Area</h3>
+              <p>
+                  Área onde você seleciona as alterações que deseja
+                  incluir no próximo commit.
+              </p>
+          </article>
+
+          <article class="card">
+              <span class="number">03</span>
+              <h3>Repositório local</h3>
+              <p>
+                  Local onde o Git armazena os commits e o histórico
+                  completo do projeto.
+              </p>
+          </article>
+
+      </section>
+
+      <!-- FLUXO -->
+      <article class="flow-card">
+
+          <h3>Fluxo das alterações</h3>
+
+          <p class="flow">
+              Working Directory
+              <span>→</span>
+              Staging Area
+              <span>→</span>
+              Repositório Local
+          </p>
+
+      </article>
+
+  </section>
 
 
-    <!-- ================= COMO FUNCIONA ================= -->
+  <!-- ================= CONTROLE DE VERSÃO ================= -->
 
-<section class="content-section">
+  <!-- ================= CONTROLE DE VERSÃO ================= -->
 
-    <p class="tag">04 / FUNCIONAMENTO</p>
+  <section class="content-section">
 
-    <h2>Como o Git funciona?</h2>
+      <p class="tag">05 / VERSIONAMENTO</p>
 
-    <div class="function-content">
+      <h2>Controle de versão</h2>
 
-        <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
-        <div class="function-text">
+      <div class="version-content">
 
-            <p class="section-intro">
-                O Git funciona como um sistema que acompanha e registra as alterações realizadas nos
-                arquivos de um projeto. O desenvolvedor modifica os arquivos em seu diretório de trabalho
-                (Working Directory), seleciona as alterações que deseja registrar na Staging Area e, em
-                seguida, cria um commit, que salva aquele conjunto de modificações no histórico do projeto.
-            </p>
+          <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
+          <div class="version-text">
 
-            <p class="section-intro">
-                O Git permite criar branches para desenvolver funcionalidades separadamente e depois unir
-                as alterações por meio de um merge. Além disso, o projeto pode ser enviado para um
-                repositório remoto, como o GitHub, permitindo armazenar o código e compartilhá-lo com
-                outras pessoas.
-            </p>
+              <p class="section-intro">
+                  O controle de versão do Git é o sistema responsável por registrar, organizar e acompanhar as alterações
+                  feitas em um projeto ao longo do tempo.
+              </p>
+              <br>
+              <p class="section-intro">
+                  Ele permite que o desenvolvedor saiba o que foi modificado, quando
+                  a alteração aconteceu e possa consultar ou recuperar versões anteriores dos arquivos. Dessa forma, o Git ajuda a
+                  evitar a perda de código, facilita a correção de erros e permite que diferentes versões de um projeto sejam gerenciadas de maneira organizada.
+              </p>
 
-        </div>
+          </div>
 
-        <!-- IMAGEM -->
-        <img
-            src="../assets/como_funciona.webp" alt="Descrição da imagem"
-            class="function-image"
-        >
+          <!-- IMAGEM -->
+          <img
+              src="../assets/controle_de_versão.png" alt="Descrição da imagem"
+              class="version-image"
+          >
 
-    </div>
+      </div>
 
-    <!-- CARDS -->
-    <section class="cards-grid">
+      <!-- CARD INFORMATIVO -->
+      <article class="info-card">
 
-        <article class="card">
-            <span class="number">01</span>
-            <h3>Working Directory</h3>
-            <p>
-                É a pasta onde você trabalha e modifica os arquivos
-                do seu projeto.
-            </p>
-        </article>
+          <h3>O que isso permite?</h3>
 
-        <article class="card">
-            <span class="number">02</span>
-            <h3>Staging Area</h3>
-            <p>
-                Área onde você seleciona as alterações que deseja
-                incluir no próximo commit.
-            </p>
-        </article>
+          <p>
+              É possível saber o que foi alterado, quando a alteração
+              aconteceu, quem realizou a mudança e recuperar versões
+              anteriores do projeto.
+          </p>
 
-        <article class="card">
-            <span class="number">03</span>
-            <h3>Repositório local</h3>
-            <p>
-                Local onde o Git armazena os commits e o histórico
-                completo do projeto.
-            </p>
-        </article>
+      </article>
 
-    </section>
+  </section>
 
-    <!-- FLUXO -->
-    <article class="flow-card">
+  <!-- ================= REPOSITÓRIO LOCAL ================= -->
 
-        <h3>Fluxo das alterações</h3>
+  <section class="content-section">
 
-        <p class="flow">
-            Working Directory
-            <span>→</span>
-            Staging Area
-            <span>→</span>
-            Repositório Local
+      <p class="tag">06 / REPOSITÓRIO</p>
+
+      <h2>Repositório local</h2>
+
+      <div class="repository-content">
+
+          <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
+          <div class="repository-text">
+
+              <p class="section-intro">
+                  Um repositório local é a cópia de um projeto do Git que fica armazenada no próprio
+                  computador do desenvolvedor. Ele contém os arquivos do projeto e também o histórico das
+                  alterações registradas por meio dos commits.
+              </p>
+              <br>
+              <p class="section-intro">
+                  No repositório local, é possível modificar arquivos, criar branches,
+                  fazer commits e consultar versões anteriores sem precisar estar conectado à internet.
+                  Posteriormente, as alterações podem ser enviadas para um repositório remoto, como o GitHub,
+                  para serem compartilhadas com outras pessoas.
+              </p>
+
+          </div>
+
+          <!-- IMAGEM -->
+          <img
+              src="../assets/repositório_local.png" alt="Descrição da imagem"
+              class="repository-image"
+          >
+
+      </div>
+
+      <!-- CARTÃO DE CÓDIGO -->
+      <article class="code-card">
+
+          <header class="card-header">
+              <p>CRIAR REPOSITÓRIO</p>
+              <p>LOCAL</p>
+          </header>
+
+          <pre><code><span>$</span> git init</code></pre>
+
+          <p class="success-box">
+              Initialized empty Git repository
+          </p>
+
+          <p class="code-description">
+              O comando <strong>git init</strong> transforma a pasta
+              atual em um repositório Git.
+          </p>
+
+      </article>
+
+  </section>
+
+    <!-- ================= WORKING DIRECTORY ================= -->
+
+  <section class="content-section">
+
+    <p class="tag">07 / WORKING DIRECTORY</p>
+
+    <h2>Working Directory</h2>
+
+    <div class="working-content">
+
+      <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
+      <div class="working-text">
+
+        <p class="section-intro">
+          O Working Directory (diretório de trabalho) é a pasta do projeto onde o desenvolvedor
+          trabalha diretamente nos arquivos. É nesse local que você cria, edita, exclui ou modifica arquivos antes
+          de registrar essas alterações no Git.
+        </p>
+        <br>
+        <p class="section-intro">
+          As mudanças feitas no Working Directory ainda não fazem parte de um commit;
+          primeiro, elas podem ser enviadas para a Staging Area usando git add e, depois, registradas no histórico com git commit. Em resumo, é
+          o espaço onde as alterações do projeto acontecem.
         </p>
 
-    </article>
+      </div>
 
-</section>
-
-
-<!-- ================= CONTROLE DE VERSÃO ================= -->
-
-<!-- ================= CONTROLE DE VERSÃO ================= -->
-
-<section class="content-section">
-
-    <p class="tag">05 / VERSIONAMENTO</p>
-
-    <h2>Controle de versão</h2>
-
-    <div class="version-content">
-
-        <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
-        <div class="version-text">
-
-            <p class="section-intro">
-                O controle de versão do Git é o sistema responsável por registrar, organizar e acompanhar as alterações
-                feitas em um projeto ao longo do tempo.
-            </p>
-            <br>
-            <p class="section-intro">
-                Ele permite que o desenvolvedor saiba o que foi modificado, quando
-                a alteração aconteceu e possa consultar ou recuperar versões anteriores dos arquivos. Dessa forma, o Git ajuda a
-                evitar a perda de código, facilita a correção de erros e permite que diferentes versões de um projeto sejam gerenciadas de maneira organizada.
-            </p>
-
-        </div>
-
-        <!-- IMAGEM -->
-        <img
-            src="../assets/controle_de_versão.png" alt="Descrição da imagem"
-            class="version-image"
-        >
+      <!-- IMAGEM -->
+      <img
+        src="../assets/working_directory.png" alt="Descrição da imagem"
+        class="working-image"
+      >
 
     </div>
 
-    <!-- CARD INFORMATIVO -->
+    <!-- CARTÃO INFORMATIVO -->
     <article class="info-card">
 
-        <h3>O que isso permite?</h3>
+      <h3>Exemplo</h3>
 
-        <p>
-            É possível saber o que foi alterado, quando a alteração
-            aconteceu, quem realizou a mudança e recuperar versões
-            anteriores do projeto.
-        </p>
+      <p>
+        Ao criar, editar ou excluir um arquivo dentro da pasta
+        do projeto, você está realizando alterações no Working
+        Directory.
+      </p>
 
     </article>
 
-</section>
+  </section>
 
-<!-- ================= REPOSITÓRIO LOCAL ================= -->
+      <!-- ================= STAGING ================= -->
 
-<section class="content-section">
+  <section class="content-section">
 
-    <p class="tag">06 / REPOSITÓRIO</p>
+    <p class="tag">08 / STAGING AREA</p>
 
-    <h2>Repositório local</h2>
+    <h2>Staging Area</h2>
 
-    <div class="repository-content">
+    <div class="staging-content">
 
-        <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
-        <div class="repository-text">
+      <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
+      <div class="staging-text">
 
-            <p class="section-intro">
-                Um repositório local é a cópia de um projeto do Git que fica armazenada no próprio
-                computador do desenvolvedor. Ele contém os arquivos do projeto e também o histórico das
-                alterações registradas por meio dos commits.
-            </p>
-            <br>
-            <p class="section-intro">
-                No repositório local, é possível modificar arquivos, criar branches,
-                fazer commits e consultar versões anteriores sem precisar estar conectado à internet.
-                Posteriormente, as alterações podem ser enviadas para um repositório remoto, como o GitHub,
-                para serem compartilhadas com outras pessoas.
-            </p>
+        <p class="section-intro">
+          A Staging Area é uma área intermediária do Git onde você seleciona e prepara as alterações que deseja incluir
+          no próximo commit. Depois de modificar arquivos no Working Directory, você utiliza o comando git add
+          para colocar essas alterações na Staging Area.
+        </p>
+        <br>
+        <p class="section-intro">
+          Isso permite escolher exatamente quais mudanças serão registradas,
+          antes de salvá-las definitivamente no histórico com o comando git commit. Em resumo, a Staging Area funciona como uma etapa
+          de preparação entre a edição dos arquivos e o registro das alterações.
+        </p>
 
-        </div>
+      </div>
 
-        <!-- IMAGEM -->
-        <img
-            src="../assets/repositório_local.png" alt="Descrição da imagem"
-            class="repository-image"
-        >
+      <!-- IMAGEM -->
+      <img
+        src="../assets/stanging_area.png" alt="Descrição da imagem"
+        class="staging-image"
+      >
 
     </div>
 
     <!-- CARTÃO DE CÓDIGO -->
     <article class="code-card">
 
-        <header class="card-header">
-            <p>CRIAR REPOSITÓRIO</p>
-            <p>LOCAL</p>
-        </header>
+      <header class="card-header">
+        <p>ADICIONAR ALTERAÇÃO</p>
+      </header>
 
-        <pre><code><span>$</span> git init</code></pre>
+      <pre><code><span>$</span> git add arquivo.html</code></pre>
 
-        <p class="success-box">
-            Initialized empty Git repository
-        </p>
+      <p>
+        Para adicionar todos os arquivos modificados, também é possível utilizar:
+      </p>
 
-        <p class="code-description">
-            O comando <strong>git init</strong> transforma a pasta
-            atual em um repositório Git.
-        </p>
+      <pre><code><span>$</span> git add .</code></pre>
 
     </article>
 
-</section>
+  </section>
 
-  <!-- ================= WORKING DIRECTORY ================= -->
+      <!-- ================= COMMITS ================= -->
 
-<section class="content-section">
+  <!-- ================= COMMITS ================= -->
 
-  <p class="tag">07 / WORKING DIRECTORY</p>
+  <section class="content-section">
 
-  <h2>Working Directory</h2>
+    <p class="tag">09 / COMMITS</p>
 
-  <div class="working-content">
+    <h2>Commits</h2>
 
-    <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
-    <div class="working-text">
+    <div class="commits-content">
 
-      <p class="section-intro">
-        O Working Directory (diretório de trabalho) é a pasta do projeto onde o desenvolvedor
-        trabalha diretamente nos arquivos. É nesse local que você cria, edita, exclui ou modifica arquivos antes
-        de registrar essas alterações no Git.
-      </p>
-      <br>
-      <p class="section-intro">
-        As mudanças feitas no Working Directory ainda não fazem parte de um commit;
-        primeiro, elas podem ser enviadas para a Staging Area usando git add e, depois, registradas no histórico com git commit. Em resumo, é
-        o espaço onde as alterações do projeto acontecem.
-      </p>
+      <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
+      <div class="commits-text">
 
-    </div>
+        <p class="section-intro">
+          Um commit é um registro das alterações feitas em um projeto no Git.
+          Ele funciona como um ponto de salvamento, armazenando as mudanças que foram
+          selecionadas na Staging Area e adicionando-as ao histórico do projeto.
+        </p>
+        <br>
+        <p class="section-intro">
+          Cada commit pode receber uma mensagem que explica o que foi alterado,
+          facilitando a identificação e o acompanhamento das diferentes etapas do
+          desenvolvimento. O comando utilizado para criar um commit é
+          git commit -m "mensagem".
+        </p>
 
-    <!-- IMAGEM -->
-    <img
-      src="../assets/working_directory.png" alt="Descrição da imagem"
-      class="working-image"
-    >
+      </div>
 
-  </div>
-
-  <!-- CARTÃO INFORMATIVO -->
-  <article class="info-card">
-
-    <h3>Exemplo</h3>
-
-    <p>
-      Ao criar, editar ou excluir um arquivo dentro da pasta
-      do projeto, você está realizando alterações no Working
-      Directory.
-    </p>
-
-  </article>
-
-</section>
-
-    <!-- ================= STAGING ================= -->
-
-<section class="content-section">
-
-  <p class="tag">08 / STAGING AREA</p>
-
-  <h2>Staging Area</h2>
-
-  <div class="staging-content">
-
-    <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
-    <div class="staging-text">
-
-      <p class="section-intro">
-        A Staging Area é uma área intermediária do Git onde você seleciona e prepara as alterações que deseja incluir
-        no próximo commit. Depois de modificar arquivos no Working Directory, você utiliza o comando git add
-        para colocar essas alterações na Staging Area.
-      </p>
-      <br>
-      <p class="section-intro">
-        Isso permite escolher exatamente quais mudanças serão registradas,
-        antes de salvá-las definitivamente no histórico com o comando git commit. Em resumo, a Staging Area funciona como uma etapa
-        de preparação entre a edição dos arquivos e o registro das alterações.
-      </p>
+      <!-- IMAGEM -->
+      <img
+        src="../assets/cmit.png" alt="Descrição da imagem"
+        class="commits-image"
+      >
 
     </div>
 
-    <!-- IMAGEM -->
-    <img
-      src="../assets/stanging_area.png" alt="Descrição da imagem"
-      class="staging-image"
-    >
+    <!-- CARTÃO DE CÓDIGO -->
+    <article class="code-card">
 
-  </div>
+      <header class="card-header">
+        <p>CRIAR COMMIT</p>
+      </header>
 
-  <!-- CARTÃO DE CÓDIGO -->
-  <article class="code-card">
+      <pre><code><span>$</span> git commit -m "Adiciona página inicial"</code></pre>
 
-    <header class="card-header">
-      <p>ADICIONAR ALTERAÇÃO</p>
-    </header>
-
-    <pre><code><span>$</span> git add arquivo.html</code></pre>
-
-    <p>
-      Para adicionar todos os arquivos modificados, também é possível utilizar:
-    </p>
-
-    <pre><code><span>$</span> git add .</code></pre>
-
-  </article>
-
-</section>
-
-    <!-- ================= COMMITS ================= -->
-
-<!-- ================= COMMITS ================= -->
-
-<section class="content-section">
-
-  <p class="tag">09 / COMMITS</p>
-
-  <h2>Commits</h2>
-
-  <div class="commits-content">
-
-    <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
-    <div class="commits-text">
-
-      <p class="section-intro">
-        Um commit é um registro das alterações feitas em um projeto no Git.
-        Ele funciona como um ponto de salvamento, armazenando as mudanças que foram
-        selecionadas na Staging Area e adicionando-as ao histórico do projeto.
+      <p>
+        A mensagem do commit deve explicar de forma clara
+        o que foi alterado.
       </p>
-      <br>
-      <p class="section-intro">
-        Cada commit pode receber uma mensagem que explica o que foi alterado,
-        facilitando a identificação e o acompanhamento das diferentes etapas do
-        desenvolvimento. O comando utilizado para criar um commit é
-        git commit -m "mensagem".
-      </p>
+
+    </article>
+
+  </section>
+
+      <!-- ================= HISTÓRICO ================= -->
+
+  <section class="content-section">
+
+    <p class="tag">10 / HISTÓRICO</p>
+
+    <h2>Histórico de alterações</h2>
+
+    <div class="history-changes-content">
+
+      <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
+      <div class="history-changes-text">
+
+        <p class="section-intro">
+          O histórico de alterações do Git é o registro de todas as modificações que foram salvas no projeto por meio dos commits.
+          Ele permite acompanhar a evolução do projeto ao longo do tempo, identificando quais alterações foram feitas e em que momento.
+        </p>
+        <br>
+        <p class="section-intro">
+          Esse histórico também possibilita consultar versões anteriores dos arquivos e entender como o código chegou ao estado atual.
+          Dessa forma, o histórico de alterações ajuda no controle, organização e recuperação do projeto quando necessário.
+        </p>
+
+      </div>
+
+      <!-- IMAGEM -->
+      <img
+      src="../assets/historico-alteracao.png"
+      alt="Histórico de alterações"
+        class="history-changes-image historico-imagem"
+  >
 
     </div>
 
-    <!-- IMAGEM -->
-    <img
-      src="../assets/commits.jpg" alt="Descrição da imagem"
-      class="commits-image"
-    >
+    <!-- CARTÃO DE CÓDIGO -->
+    <article class="code-card">
 
-  </div>
+      <header class="card-header">
+        <p>CONSULTAR HISTÓRICO</p>
+      </header>
 
-  <!-- CARTÃO DE CÓDIGO -->
-  <article class="code-card">
+      <pre><code><span>$</span> git log</code></pre>
 
-    <header class="card-header">
-      <p>CRIAR COMMIT</p>
-    </header>
-
-    <pre><code><span>$</span> git commit -m "Adiciona página inicial"</code></pre>
-
-    <p>
-      A mensagem do commit deve explicar de forma clara
-      o que foi alterado.
-    </p>
-
-  </article>
-
-</section>
-
-    <!-- ================= HISTÓRICO ================= -->
-
-<section class="content-section">
-
-  <p class="tag">10 / HISTÓRICO</p>
-
-  <h2>Histórico de alterações</h2>
-
-  <div class="history-changes-content">
-
-    <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
-    <div class="history-changes-text">
-
-      <p class="section-intro">
-        O histórico de alterações do Git é o registro de todas as modificações que foram salvas no projeto por meio dos commits.
-        Ele permite acompanhar a evolução do projeto ao longo do tempo, identificando quais alterações foram feitas e em que momento.
+      <p>
+        O comando mostra informações como os commits,
+        autores, datas e mensagens registradas.
       </p>
-      <br>
-      <p class="section-intro">
-        Esse histórico também possibilita consultar versões anteriores dos arquivos e entender como o código chegou ao estado atual.
-        Dessa forma, o histórico de alterações ajuda no controle, organização e recuperação do projeto quando necessário.
-      </p>
+
+    </article>
+
+  </section>
+
+
+      <!-- ================= BRANCHES ================= -->
+
+  <section class="content-section">
+
+    <p class="tag">11 / BRANCHES</p>
+
+    <h2>Branches</h2>
+
+    <div class="branches-content">
+
+      <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
+      <div class="branches-text">
+
+        <p class="section-intro">
+          As branches (ramificações) são versões independentes de um projeto dentro do Git, usadas para desenvolver funcionalidades,
+          fazer correções ou testar mudanças sem alterar diretamente a versão principal.
+          Cada branch possui seu próprio histórico de commits, permitindo que diferentes partes do projeto sejam desenvolvidas separadamente.
+        </p>
+        <br>
+        <p class="section-intro">
+          Depois que uma alteração é concluída e testada, ela pode ser integrada à branch principal por meio de um merge.
+          Dessa forma, as branches ajudam a manter o projeto mais organizado, seguro e adequado para o trabalho em equipe.
+        </p>
+
+      </div>
+
+      <!-- IMAGEM -->
+      <img
+      src="../assets/bbranchs.webp"
+      alt=" Exemplo de brench"
+      class="history-changes-image"
+  >
 
     </div>
 
-    <!-- IMAGEM -->
-    <img
-    src="../assets/histórico_de_alteração.webp"
-    alt="Histórico de alterações"
-    class="history-changes-image"
->
+    <!-- CARTÃO DE CÓDIGO -->
+    <article class="code-card">
 
-  </div>
+      <header class="card-header">
+        <p>CRIAR BRANCH</p>
+      </header>
 
-  <!-- CARTÃO DE CÓDIGO -->
-  <article class="code-card">
+      <pre><code><span>$</span> git checkout -b "sua branch"
+  <span>$</span> git switch "sua branch"</code></pre>
 
-    <header class="card-header">
-      <p>CONSULTAR HISTÓRICO</p>
-    </header>
+    </article>
 
-    <pre><code><span>$</span> git log</code></pre>
-
-    <p>
-      O comando mostra informações como os commits,
-      autores, datas e mensagens registradas.
-    </p>
-
-  </article>
-
-</section>
+  </section>
 
 
-    <!-- ================= BRANCHES ================= -->
+      <!-- ================= CONFLITOS ================= -->
 
-<section class="content-section">
+  <section class="content-section">
 
-  <p class="tag">11 / BRANCHES</p>
+    <p class="tag">13 / CONFLITOS</p>
 
-  <h2>Branches</h2>
+    <h2>Conflitos</h2>
 
-  <div class="branches-content">
+    <div class="conflicts-content">
 
-    <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
-    <div class="branches-text">
+      <!-- TEXTO -->
+      <div class="conflicts-text">
 
-      <p class="section-intro">
-        As branches (ramificações) são versões independentes de um projeto dentro do Git, usadas para desenvolver funcionalidades,
-        fazer correções ou testar mudanças sem alterar diretamente a versão principal.
-        Cada branch possui seu próprio histórico de commits, permitindo que diferentes partes do projeto sejam desenvolvidas separadamente.
-      </p>
-      <br>
-      <p class="section-intro">
-        Depois que uma alteração é concluída e testada, ela pode ser integrada à branch principal por meio de um merge.
-        Dessa forma, as branches ajudam a manter o projeto mais organizado, seguro e adequado para o trabalho em equipe.
-      </p>
+        <p class="section-intro">
+          Os conflitos no Git acontecem quando duas alterações diferentes são feitas na mesma parte de um arquivo e o
+          Git não consegue decidir automaticamente qual delas deve ser mantida.
+          Isso é comum quando duas pessoas trabalham em branches diferentes e depois tentam unir seus
+          códigos usando um merge.
+        </p>
+        <br>
+        <p class="section-intro">
+          Quando ocorre um conflito, o Git marca a parte do arquivo que precisa
+          ser analisada, e o desenvolvedor deve escolher se vai manter uma alteração, a outra ou
+          combinar as duas. Depois de resolver o conflito, é necessário salvar o arquivo e realizar um novo commit para registrar
+          a solução. Assim, os conflitos fazem parte do trabalho colaborativo e exigem que os desenvolvedores revisem as alterações
+          antes de integrá-las.
+        </p>
 
-    </div>
+      </div>
 
-    <!-- IMAGEM -->
-    <img
-    src="../assets/branches.png"
-    alt=" Exemplo de brench"
-    class="history-changes-image"
->
-
-  </div>
-
-  <!-- CARTÃO DE CÓDIGO -->
-  <article class="code-card">
-
-    <header class="card-header">
-      <p>CRIAR BRANCH</p>
-    </header>
-
-    <pre><code><span>$</span> git checkout -b "sua branch"
-<span>$</span> git switch "sua branch"</code></pre>
-
-  </article>
-
-</section>
-
-
-    <!-- ================= CONFLITOS ================= -->
-
-<section class="content-section">
-
-  <p class="tag">13 / CONFLITOS</p>
-
-  <h2>Conflitos</h2>
-
-  <div class="conflicts-content">
-
-    <!-- TEXTO -->
-    <div class="conflicts-text">
-
-      <p class="section-intro">
-        Os conflitos no Git acontecem quando duas alterações diferentes são feitas na mesma parte de um arquivo e o
-        Git não consegue decidir automaticamente qual delas deve ser mantida.
-        Isso é comum quando duas pessoas trabalham em branches diferentes e depois tentam unir seus
-        códigos usando um merge.
-      </p>
-      <br>
-      <p class="section-intro">
-        Quando ocorre um conflito, o Git marca a parte do arquivo que precisa
-        ser analisada, e o desenvolvedor deve escolher se vai manter uma alteração, a outra ou
-        combinar as duas. Depois de resolver o conflito, é necessário salvar o arquivo e realizar um novo commit para registrar
-        a solução. Assim, os conflitos fazem parte do trabalho colaborativo e exigem que os desenvolvedores revisem as alterações
-        antes de integrá-las.
-      </p>
+      <!-- IMAGEM -->
+      <img
+        src="../assets/cconflit.png" alt="conflitos de merge no git"
+        class="conflicts-image"
+      >
 
     </div>
 
-    <!-- IMAGEM -->
-    <img
-      src="../assets/conflitos.webp" alt="conflitos de merge no git"
-      class="conflicts-image"
-    >
+    <!-- CARTÃO INFORMATIVO -->
+    <article class="info-card">
 
-  </div>
+      <h3>Como resolver?</h3>
 
-  <!-- CARTÃO INFORMATIVO -->
-  <article class="info-card">
-
-    <h3>Como resolver?</h3>
-
-    <p>
-      Para resolver um conflito no Git, primeiro você precisa identificar
-      quais partes do arquivo foram alteradas de maneiras diferentes. O Git marca essas partes com símbolos
-      como &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;, ======= e &gt;&gt;&gt;&gt;&gt;&gt;&gt;. Você deve abrir o arquivo, analisar as duas versões e escolher qual alteração manter
-      ou combinar as duas, removendo esses marcadores. Depois, salve o arquivo e informe ao Git que o conflito foi resolvido.
-      Por fim, finalize a resolução criando um commit com git commit -m "Resolve conflito". Em resumo: identificar
-      o conflito → escolher/combinar as alterações → remover os marcadores → git add → git commit.
-    </p>
-
-  </article>
-
-</section>
-
-    <!-- ================= REPOSITÓRIO REMOTO ================= -->
-
-<section class="content-section">
-
-  <p class="tag">14 / REMOTO</p>
-
-  <h2>Repositório remoto</h2>
-
-  <div class="remote-content">
-
-    <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
-    <div class="remote-text">
-
-      <p class="section-intro">
-        Um repositório remoto é uma versão do projeto armazenada em um servidor ou serviço online,
-        permitindo que o código e o histórico do Git sejam acessados e compartilhados por diferentes
-        pessoas.
+      <p>
+        Para resolver um conflito no Git, primeiro você precisa identificar
+        quais partes do arquivo foram alteradas de maneiras diferentes. O Git marca essas partes com símbolos
+        como &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;, ======= e &gt;&gt;&gt;&gt;&gt;&gt;&gt;. Você deve abrir o arquivo, analisar as duas versões e escolher qual alteração manter
+        ou combinar as duas, removendo esses marcadores. Depois, salve o arquivo e informe ao Git que o conflito foi resolvido.
+        Por fim, finalize a resolução criando um commit com git commit -m "Resolve conflito". Em resumo: identificar
+        o conflito → escolher/combinar as alterações → remover os marcadores → git add → git commit.
       </p>
-      <br>
-      <p class="section-intro">
-        Ele é utilizado para enviar as alterações feitas no repositório local,
-        usando comandos como git push, e também para baixar alterações feitas por outros
-        desenvolvedores, usando git pull ou git fetch. Um exemplo de serviço que hospeda
-        repositórios remotos é o GitHub. Dessa forma, o repositório remoto facilita o backup, compartilhamento
-        e trabalho colaborativo em projetos.
-      </p>
+
+    </article>
+
+  </section>
+
+      <!-- ================= REPOSITÓRIO REMOTO ================= -->
+
+  <section class="content-section">
+
+    <p class="tag">14 / REMOTO</p>
+
+    <h2>Repositório remoto</h2>
+
+    <div class="remote-content">
+
+      <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
+      <div class="remote-text">
+
+        <p class="section-intro">
+          Um repositório remoto é uma versão do projeto armazenada em um servidor ou serviço online,
+          permitindo que o código e o histórico do Git sejam acessados e compartilhados por diferentes
+          pessoas.
+        </p>
+        <br>
+        <p class="section-intro">
+          Ele é utilizado para enviar as alterações feitas no repositório local,
+          usando comandos como git push, e também para baixar alterações feitas por outros
+          desenvolvedores, usando git pull ou git fetch. Um exemplo de serviço que hospeda
+          repositórios remotos é o GitHub. Dessa forma, o repositório remoto facilita o backup, compartilhamento
+          e trabalho colaborativo em projetos.
+        </p>
+
+      </div>
+
+      <!-- IMAGEM -->
+      <img
+        src="../assets/repósitório_remoto.jpg" alt="repositório remoto"
+        class="remote-image"
+      >
 
     </div>
 
-    <!-- IMAGEM -->
-    <img
-      src="../assets/repósitório_remoto.jpg" alt="repositório remoto"
-      class="remote-image"
-    >
+    <!-- CARTÃO INFORMATIVO -->
+    <article class="info-card">
 
-  </div>
+      <h3>GitHub e outros serviços</h3>
 
-  <!-- CARTÃO INFORMATIVO -->
-  <article class="info-card">
-
-    <h3>GitHub e outros serviços</h3>
-
-    <p>
-      Plataformas como o GitHub podem hospedar repositórios
-      Git remotos. O Git, por sua vez, continua sendo a
-      ferramenta responsável pelo controle de versão.
-    </p>
-
-  </article>
-
-</section>
-    <!-- ================= GITIGNORE ================= -->
-
-<section class="content-section">
-
-  <p class="tag">15 / ORGANIZAÇÃO</p>
-
-  <h2>.gitignore</h2>
-
-  <div class="gitignore-content">
-
-    <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
-    <div class="gitignore-text">
-
-      <p class="section-intro">
-        O .gitignore é um arquivo utilizado pelo Git para indicar quais arquivos e pastas devem
-        ser ignorados e não devem ser enviados para o repositório. Ele é útil para evitar que arquivos
-        desnecessários ou que não precisam fazer parte do projeto sejam adicionados aos commits, como arquivos
-        temporários, configurações pessoais, pastas de dependências e arquivos gerados automaticamente.
+      <p>
+        Plataformas como o GitHub podem hospedar repositórios
+        Git remotos. O Git, por sua vez, continua sendo a
+        ferramenta responsável pelo controle de versão.
       </p>
-      <br>
-      <p class="section-intro">
-        Por exemplo, ao colocar *.log no .gitignore, os arquivos com extensão .log serão ignorados pelo Git.
-        Dessa forma, o .gitignore ajuda a manter o repositório mais organizado e limpo, contendo apenas os
-        arquivos realmente importantes para o projeto.
-      </p>
+
+    </article>
+
+  </section>
+      <!-- ================= GITIGNORE ================= -->
+
+  <section class="content-section">
+
+    <p class="tag">15 / ORGANIZAÇÃO</p>
+
+    <h2>.gitignore</h2>
+
+    <div class="gitignore-content">
+
+      <!-- AGRUPAMENTO DOS PARÁGRAFOS -->
+      <div class="gitignore-text">
+
+        <p class="section-intro">
+          O .gitignore é um arquivo utilizado pelo Git para indicar quais arquivos e pastas devem
+          ser ignorados e não devem ser enviados para o repositório. Ele é útil para evitar que arquivos
+          desnecessários ou que não precisam fazer parte do projeto sejam adicionados aos commits, como arquivos
+          temporários, configurações pessoais, pastas de dependências e arquivos gerados automaticamente.
+        </p>
+        <br>
+        <p class="section-intro">
+          Por exemplo, ao colocar *.log no .gitignore, os arquivos com extensão .log serão ignorados pelo Git.
+          Dessa forma, o .gitignore ajuda a manter o repositório mais organizado e limpo, contendo apenas os
+          arquivos realmente importantes para o projeto.
+        </p>
+
+      </div>
+
+      <!-- IMAGEM -->
+      <img
+      src="../assets/gitignore.png"
+      alt="Arquivo .gitignore"
+      class="history-changes-image"
+  >
 
     </div>
 
-    <!-- IMAGEM -->
-    <img
-    src="../assets/gitignore.png"
-    alt="Arquivo .gitignore"
-    class="history-changes-image"
->
+    <!-- CARTÃO DE CÓDIGO -->
+    <article class="code-card">
 
-  </div>
+      <header class="card-header">
+        <p>EXEMPLO DE .GITIGNORE</p>
+      </header>
 
-  <!-- CARTÃO DE CÓDIGO -->
-  <article class="code-card">
+      <pre><code>node_modules/
+  .env
+  *.log
+  .DS_Store</code></pre>
 
-    <header class="card-header">
-      <p>EXEMPLO DE .GITIGNORE</p>
-    </header>
-
-    <pre><code>node_modules/
-.env
-*.log
-.DS_Store</code></pre>
-
-    <p>
-      Ele é útil para evitar o versionamento de arquivos
-      temporários, informações sensíveis e arquivos gerados
-      automaticamente.
-    </p>
-
-  </article>
-
-</section>
-    <!-- ================= GIT X GITHUB ================= -->
-
-    <section class="content-section">
-
-      <p class="tag">16 / COMPARAÇÃO</p>
-
-      <h2>Git × GitHub</h2>
-
-      <p class="section-intro">
-        Apesar de trabalharem juntos, Git e GitHub são coisas
-        diferentes.
+      <p>
+        Ele é útil para evitar o versionamento de arquivos
+        temporários, informações sensíveis e arquivos gerados
+        automaticamente.
       </p>
 
+    </article>
 
-      <section class="cards-grid two-columns">
+  </section>
+      <!-- ================= GIT X GITHUB ================= -->
 
-        <article class="card">
+      <section class="content-section">
 
-          <span class="number">GIT</span>
+        <p class="tag">16 / COMPARAÇÃO</p>
 
-          <h3>Controle de versão</h3>
+        <h2>Git × GitHub</h2>
 
-          <p>
-          O Git é um sistema de controle de versão utilizado para acompanhar e registrar as alterações feitas em um projeto. 
-          Ele funciona principalmente no computador do desenvolvedor e permite criar commits, branches, realizar merge, consultar 
-          o histórico de alterações e recuperar versões anteriores do projeto. O Git pode ser utilizado mesmo sem internet, 
-          já que grande parte de suas funções acontece no repositório local.
+        <p class="section-intro">
+          Apesar de trabalharem juntos, Git e GitHub são coisas
+          diferentes.
+        </p>
+
+
+        <section class="cards-grid two-columns">
+
+          <article class="card">
+
+            <span class="number">GIT</span>
+
+            <h3>Controle de versão</h3>
+
+            <p>
+            O Git é um sistema de controle de versão utilizado para acompanhar e registrar as alterações feitas em um projeto. 
+            Ele funciona principalmente no computador do desenvolvedor e permite criar commits, branches, realizar merge, consultar 
+            o histórico de alterações e recuperar versões anteriores do projeto. O Git pode ser utilizado mesmo sem internet, 
+            já que grande parte de suas funções acontece no repositório local.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <span class="number">GITHUB</span>
+
+            <h3>Plataforma de colaboração</h3>
+
+            <p>
+            O GitHub é uma plataforma online que permite armazenar repositórios Git em servidores 
+            remotos e facilitar o compartilhamento e a colaboração entre desenvolvedores. 
+            Ele oferece recursos como pull requests, issues, revisão de código e gerenciamento de projetos. 
+            Diferentemente do Git, o GitHub depende de uma plataforma online para hospedar os projetos e permitir que
+            outras pessoas tenham acesso a eles.
+            </p>
+
+          </article>
+
+        </section>
+
+      </section>
+
+
+      <!-- ================= FLUXO ================= -->
+
+      <section class="content-section">
+
+        <p class="tag">17 / FLUXO</p>
+
+        <h2>Fluxo básico de trabalho com Git</h2>
+
+        <p class="section-intro">
+          Um fluxo básico consiste em modificar os arquivos,
+          selecionar as alterações, criar um commit e, quando
+          necessário, enviar as alterações para um repositório remoto.
+        </p>
+
+        <article class="flow-card">
+
+          <p class="flow">
+            Editar
+            <span>→</span>
+            git add
+            <span>→</span>
+            git commit
+            <span>→</span>
+            git push
           </p>
 
         </article>
 
 
-        <article class="card">
+        <article class="code-card">
 
-          <span class="number">GITHUB</span>
+          <pre><code><span>$</span> git status
+  <span>$</span> git add .
+  <span>$</span> git commit -m "Atualiza projeto"
+  <span>$</span> git push</code></pre>
 
-          <h3>Plataforma de colaboração</h3>
+        </article>
+
+      </section>
+
+
+    <!-- ================= BOAS PRÁTICAS ================= -->
+
+  <section class="content-section">
+
+    <p class="tag">18 / BOAS PRÁTICAS</p>
+
+    <h2>Boas práticas de commits</h2>
+
+    <p class="section-intro">
+      Bons commits tornam o histórico mais organizado e facilitam
+      a compreensão das alterações realizadas no projeto.
+    </p>
+
+    <!-- CARDS DE BOAS PRÁTICAS -->
+    <section class="cards-grid">
+
+      <article class="card">
+        <span class="number">01</span>
+        <h3>Seja claro</h3>
+        <p>
+          Escreva mensagens que expliquem objetivamente a alteração.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="number">02</span>
+        <h3>Commits pequenos</h3>
+        <p>
+          Evite colocar muitas alterações diferentes em um único commit.
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="number">03</span>
+        <h3>Use verbos</h3>
+        <p>
+          Prefira mensagens como "Adiciona", "Corrige" e "Atualiza".
+        </p>
+      </article>
+
+      <article class="card">
+        <span class="number">04</span>
+        <h3>Organize o histórico</h3>
+        <p>
+          Faça commits relacionados a uma tarefa ou mudança específica.
+        </p>
+      </article>
+
+    </section>
+
+    <div class="commit-terminal">
+
+      <div class="terminal-header">
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <p>Terminal</p>
+      </div>
+
+      <pre><code><span class="terminal-symbol">$</span> git commit -m "correção na main"</code></pre>
+
+    </div>
+
+  </section>
+
+      <!-- ================= CONFIGURAÇÃO ================= -->
+
+      <section class="content-section">
+
+        <p class="tag">19 / CONFIGURAÇÃO</p>
+
+        <h2>Configuração inicial do Git</h2>
+
+        <p class="section-intro">
+          Antes de começar a criar commits, é recomendado configurar
+          o nome e o e-mail que serão associados às suas alterações.
+        </p>
+
+
+        <article class="code-card">
+
+          <header class="card-header">
+            <p>GIT CONFIG</p>
+            <p>USER INFORMATION</p>
+          </header>
+
+          <pre><code><span>$</span> git config --global user.name "Seu Nome"
+
+  <span>$</span> git config --global user.email "seu@email.com"</code></pre>
+
+        </article>
+
+
+        <article class="code-card">
+
+          <header class="card-header">
+            <p>VERIFICAR CONFIGURAÇÕES</p>
+          </header>
+
+          <pre><code><span>$</span> git config --list</code></pre>
 
           <p>
-          O GitHub é uma plataforma online que permite armazenar repositórios Git em servidores 
-          remotos e facilitar o compartilhamento e a colaboração entre desenvolvedores. 
-          Ele oferece recursos como pull requests, issues, revisão de código e gerenciamento de projetos. 
-          Diferentemente do Git, o GitHub depende de uma plataforma online para hospedar os projetos e permitir que
-          outras pessoas tenham acesso a eles.
+            Esse comando permite visualizar as configurações
+            atualmente definidas no Git.
           </p>
 
         </article>
 
       </section>
 
-    </section>
 
+      <!-- ================= RESUMO ================= -->
 
-    <!-- ================= FLUXO ================= -->
+      <section class="summary">
 
-    <section class="content-section">
+        <p class="tag">20 / RESUMO</p>
 
-      <p class="tag">17 / FLUXO</p>
+        <h2>Agora você já sabe o básico sobre Git.</h2>
 
-      <h2>Fluxo básico de trabalho com Git</h2>
-
-      <p class="section-intro">
-        Um fluxo básico consiste em modificar os arquivos,
-        selecionar as alterações, criar um commit e, quando
-        necessário, enviar as alterações para um repositório remoto.
-      </p>
-
-      <article class="flow-card">
-
-        <p class="flow">
-          Editar
-          <span>→</span>
-          git add
-          <span>→</span>
-          git commit
-          <span>→</span>
-          git push
+        <p class="section-intro">
+          Você aprendeu desde a origem do Git até seu fluxo básico
+          de trabalho, incluindo commits, branches, merge,
+          repositórios e boas práticas.
         </p>
 
-      </article>
+        <article class="summary-card">
+
+          <p>
+            Entender Git é entender como controlar,
+            organizar e acompanhar a evolução de um projeto.
+          </p>
+
+        </article>
+
+      </section>
 
 
-      <article class="code-card">
-
-        <pre><code><span>$</span> git status
-<span>$</span> git add .
-<span>$</span> git commit -m "Atualiza projeto"
-<span>$</span> git push</code></pre>
-
-      </article>
-
-    </section>
-
-
-   <!-- ================= BOAS PRÁTICAS ================= -->
-
-<section class="content-section">
-
-  <p class="tag">18 / BOAS PRÁTICAS</p>
-
-  <h2>Boas práticas de commits</h2>
-
-  <p class="section-intro">
-    Bons commits tornam o histórico mais organizado e facilitam
-    a compreensão das alterações realizadas no projeto.
-  </p>
-
-  <!-- CARDS DE BOAS PRÁTICAS -->
-  <section class="cards-grid">
-
-    <article class="card">
-      <span class="number">01</span>
-      <h3>Seja claro</h3>
-      <p>
-        Escreva mensagens que expliquem objetivamente a alteração.
-      </p>
-    </article>
-
-    <article class="card">
-      <span class="number">02</span>
-      <h3>Commits pequenos</h3>
-      <p>
-        Evite colocar muitas alterações diferentes em um único commit.
-      </p>
-    </article>
-
-    <article class="card">
-      <span class="number">03</span>
-      <h3>Use verbos</h3>
-      <p>
-        Prefira mensagens como "Adiciona", "Corrige" e "Atualiza".
-      </p>
-    </article>
-
-    <article class="card">
-      <span class="number">04</span>
-      <h3>Organize o histórico</h3>
-      <p>
-        Faça commits relacionados a uma tarefa ou mudança específica.
-      </p>
-    </article>
-
-  </section>
-
-  <div class="commit-terminal">
-
-    <div class="terminal-header">
-      <span class="terminal-dot"></span>
-      <span class="terminal-dot"></span>
-      <span class="terminal-dot"></span>
-      <p>Terminal</p>
-    </div>
-
-    <pre><code><span class="terminal-symbol">$</span> git commit -m "correção na main"</code></pre>
-
-  </div>
-
-</section>
-
-    <!-- ================= CONFIGURAÇÃO ================= -->
-
-    <section class="content-section">
-
-      <p class="tag">19 / CONFIGURAÇÃO</p>
-
-      <h2>Configuração inicial do Git</h2>
-
-      <p class="section-intro">
-        Antes de começar a criar commits, é recomendado configurar
-        o nome e o e-mail que serão associados às suas alterações.
-      </p>
-
-
-      <article class="code-card">
-
-        <header class="card-header">
-          <p>GIT CONFIG</p>
-          <p>USER INFORMATION</p>
-        </header>
-
-        <pre><code><span>$</span> git config --global user.name "Seu Nome"
-
-<span>$</span> git config --global user.email "seu@email.com"</code></pre>
-
-      </article>
-
-
-      <article class="code-card">
-
-        <header class="card-header">
-          <p>VERIFICAR CONFIGURAÇÕES</p>
-        </header>
-
-        <pre><code><span>$</span> git config --list</code></pre>
-
-        <p>
-          Esse comando permite visualizar as configurações
-          atualmente definidas no Git.
-        </p>
-
-      </article>
-
-    </section>
-
-
-    <!-- ================= RESUMO ================= -->
-
-    <section class="summary">
-
-      <p class="tag">20 / RESUMO</p>
-
-      <h2>Agora você já sabe o básico sobre Git.</h2>
-
-      <p class="section-intro">
-        Você aprendeu desde a origem do Git até seu fluxo básico
-        de trabalho, incluindo commits, branches, merge,
-        repositórios e boas práticas.
-      </p>
-
-      <article class="summary-card">
-
-        <p>
-          Entender Git é entender como controlar,
-          organizar e acompanhar a evolução de um projeto.
-        </p>
-
-      </article>
-
-    </section>
-
-
-  </main>
-  <footer>
-    <div class="container">
+    </main>
+    <footer>
+      <div class="container">
         <p>© 2026 GitBase</p>
         <p>Aprenda. Versione. Colabore.</p>
-    </div>
-</footer>
+      </div>
+    </footer>
   </body>
 </html
